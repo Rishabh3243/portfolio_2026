@@ -8,8 +8,6 @@ import {
   Database,
   Code,
   CheckCircle2,
-  RefreshCw,
-  Terminal,
 } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 

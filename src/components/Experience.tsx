@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, MapPin, CheckCircle2, Award, Briefcase, HeartHandshake, Users } from 'lucide-react';
+import { Calendar, MapPin, CheckCircle2, Award, Briefcase, HeartHandshake } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import { experienceData } from '../data/experience';
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, FileText, Github, Linkedin, Sparkles, Terminal } from 'lucide-react';
+import { ArrowRight, FileText, Github, Linkedin } from 'lucide-react';
 import { profileData } from '../data/profile';
 import { useRouter } from '../context/RouterContext';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Award, Star, Users, CheckCircle2 } from 'lucide-react';
+import { Trophy } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import { achievementsData } from '../data/achievements';
 
@@ -112,7 +112,6 @@ const SIHTrophyIcon: React.FC<{ className?: string }> = ({ className = 'w-full h
 );
 
 export const Achievements: React.FC<AchievementsProps> = ({ showHeader = false }) => {
-  const sihWinner = achievementsData[0];
   const otherAchievements = achievementsData.slice(1);
 
   return (

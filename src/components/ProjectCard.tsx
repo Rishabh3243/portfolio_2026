@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Cpu, Layers } from 'lucide-react';
+import { Github, ExternalLink, Cpu } from 'lucide-react';
 import { Project } from '../types';
 
 interface ProjectCardProps {

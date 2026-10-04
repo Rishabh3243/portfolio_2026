@@ -1,5 +1,5 @@
 import React from 'react';
-import { Eye, Cpu, Sparkles, Bot, ChevronRight, Layers } from 'lucide-react';
+import { Eye, Cpu, Sparkles, Bot, ChevronRight } from 'lucide-react';
 import { useRouter } from '../context/RouterContext';
 
 export const AIStack: React.FC = () => {
