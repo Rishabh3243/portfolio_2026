@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="16" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <!-- Outer Silicon Package BGA outline -->
+  <rect x="18" y="18" width="84" height="84" rx="10" fill="#E8E1C9" stroke="#405C3A" stroke-width="2"/>
+  
+  <!-- Solder Corner Marks -->
+  <circle cx="26" cy="26" r="3" fill="#405C3A"/>
+  
+  <!-- Inner Silicon Die with integrated CPU, GPU, NPU partitions -->
+  <rect x="30" y="30" width="60" height="60" rx="6" fill="#39402F" stroke="#B59A5A" stroke-width="1.5"/>
+  
+  <!-- CPU Block -->
+  <rect x="36" y="36" width="22" height="22" rx="3" fill="#405C3A" stroke="#506B42" stroke-width="1"/>
+  <text x="47" y="51" fill="#F6F0DC" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">CPU</text>
+  
+  <!-- GPU Block -->
+  <rect x="62" y="36" width="22" height="22" rx="3" fill="#506B42" stroke="#8A9A62" stroke-width="1"/>
+  <text x="73" y="51" fill="#F6F0DC" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">GPU</text>
+  
+  <!-- NPU Block -->
+  <rect x="36" y="62" width="22" height="22" rx="3" fill="#B59A5A" stroke="#FAF7EE" stroke-width="1"/>
+  <text x="47" y="77" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">NPU</text>
+  
+  <!-- Memory / Interconnect Bus -->
+  <rect x="62" y="62" width="22" height="22" rx="3" fill="#344C30" stroke="#405C3A" stroke-width="1"/>
+  <text x="73" y="77" fill="#E8E1C9" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="bold" text-anchor="middle">RAM</text>
+  
+  <!-- Peripheral traces -->
+  <line x1="8" y1="42" x2="18" y2="42" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="8" y1="60" x2="18" y2="60" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="8" y1="78" x2="18" y2="78" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="102" y1="42" x2="112" y2="42" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="102" y1="60" x2="112" y2="60" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="102" y1="78" x2="112" y2="78" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="42" y1="8" x2="42" y2="18" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="60" y1="8" x2="60" y2="18" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="78" y1="8" x2="78" y2="18" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="42" y1="102" x2="42" y2="112" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="60" y1="102" x2="60" y2="112" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="78" y1="102" x2="78" y2="112" stroke="#8A9A62" stroke-width="2"/>
+
+  <!-- Label -->
+  <text x="60" y="105" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">SOC</text>
+</svg>

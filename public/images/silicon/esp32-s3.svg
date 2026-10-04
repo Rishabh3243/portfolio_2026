@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <rect width="160" height="120" rx="14" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <!-- ESP32 Module Package with PCB Antenna -->
+  <rect x="35" y="15" width="90" height="90" rx="6" fill="#39402F" stroke="#405C3A" stroke-width="2"/>
+  
+  <!-- PCB Meandered Inverted-F Antenna (MIFA) trace at top -->
+  <path d="M45 28 H65 V22 H85 V28 H105 V22 H115" stroke="#B59A5A" stroke-width="2" fill="none"/>
+  
+  <!-- Metal Shielding Can -->
+  <rect x="42" y="34" width="76" height="64" rx="4" fill="#E8E1C9" stroke="#8A9A62" stroke-width="1.5"/>
+  <text x="80" y="54" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">ESPRESSIF</text>
+  <text x="80" y="68" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">ESP32-S3</text>
+  
+  <rect x="48" y="76" width="64" height="14" rx="3" fill="#405C3A"/>
+  <text x="80" y="86" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">AI VECTOR &bull; 240MHz</text>
+  
+  <!-- Castellation pads -->
+  <g fill="#B59A5A">
+    <circle cx="35" cy="45" r="2"/>
+    <circle cx="35" cy="55" r="2"/>
+    <circle cx="35" cy="65" r="2"/>
+    <circle cx="35" cy="75" r="2"/>
+    <circle cx="35" cy="85" r="2"/>
+    <circle cx="125" cy="45" r="2"/>
+    <circle cx="125" cy="55" r="2"/>
+    <circle cx="125" cy="65" r="2"/>
+    <circle cx="125" cy="75" r="2"/>
+    <circle cx="125" cy="85" r="2"/>
+  </g>
+</svg>

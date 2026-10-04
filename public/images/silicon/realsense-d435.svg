@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <rect width="160" height="120" rx="14" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <!-- Sleek RealSense Camera Bar Body -->
+  <rect x="15" y="38" width="130" height="44" rx="8" fill="#39402F" stroke="#405C3A" stroke-width="2"/>
+  
+  <!-- Left IR Camera Lens -->
+  <circle cx="36" cy="60" r="10" fill="#405C3A" stroke="#8A9A62" stroke-width="1.5"/>
+  <circle cx="36" cy="60" r="5" fill="#FAF7EE"/>
+  
+  <!-- IR Pattern Projector -->
+  <circle cx="64" cy="60" r="6" fill="#B59A5A" stroke="#FAF7EE" stroke-width="1"/>
+  
+  <!-- RGB Color Sensor -->
+  <circle cx="86" cy="60" r="8" fill="#405C3A" stroke="#8A9A62" stroke-width="1.5"/>
+  <circle cx="86" cy="60" r="4" fill="#506B42"/>
+
+  <!-- Right IR Camera Lens (Stereo baseline) -->
+  <circle cx="120" cy="60" r="10" fill="#405C3A" stroke="#8A9A62" stroke-width="1.5"/>
+  <circle cx="120" cy="60" r="5" fill="#FAF7EE"/>
+  
+  <text x="80" y="28" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">INTEL REALSENSE D435i</text>
+  <text x="80" y="100" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">STEREO DEPTH + IMU</text>
+</svg>

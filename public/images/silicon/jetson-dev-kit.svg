@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <rect width="160" height="120" rx="14" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <!-- Carrier Board -->
+  <rect x="20" y="15" width="120" height="90" rx="8" fill="#39402F" stroke="#405C3A" stroke-width="2"/>
+  
+  <!-- Massive Heatsink with fins -->
+  <rect x="50" y="30" width="56" height="54" rx="4" fill="#405C3A" stroke="#8A9A62" stroke-width="1.5"/>
+  <!-- Fins -->
+  <line x1="56" y1="30" x2="56" y2="84" stroke="#344C30" stroke-width="1.5"/>
+  <line x1="62" y1="30" x2="62" y2="84" stroke="#344C30" stroke-width="1.5"/>
+  <line x1="68" y1="30" x2="68" y2="84" stroke="#344C30" stroke-width="1.5"/>
+  <line x1="74" y1="30" x2="74" y2="84" stroke="#344C30" stroke-width="1.5"/>
+  <line x1="80" y1="30" x2="80" y2="84" stroke="#344C30" stroke-width="1.5"/>
+  <line x1="86" y1="30" x2="86" y2="84" stroke="#344C30" stroke-width="1.5"/>
+  <line x1="92" y1="30" x2="92" y2="84" stroke="#344C30" stroke-width="1.5"/>
+  <line x1="98" y1="30" x2="98" y2="84" stroke="#344C30" stroke-width="1.5"/>
+  
+  <!-- Center fan badge -->
+  <circle cx="77" cy="57" r="14" fill="#344C30" stroke="#76B900" stroke-width="1.5"/>
+  <text x="77" y="55" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="bold" text-anchor="middle">JETSON</text>
+  <text x="77" y="63" fill="#76B900" font-family="'JetBrains Mono', monospace" font-size="5" font-weight="bold" text-anchor="middle">DEVKIT</text>
+  
+  <!-- Connectors -->
+  <rect x="14" y="35" width="10" height="20" rx="2" fill="#E8E1C9"/>
+  <rect x="14" y="62" width="10" height="20" rx="2" fill="#E8E1C9"/>
+  <rect x="114" y="35" width="14" height="8" rx="1" fill="#B59A5A"/>
+  <rect x="114" y="48" width="14" height="8" rx="1" fill="#B59A5A"/>
+  
+  <!-- CSI camera connectors -->
+  <rect x="52" y="94" width="20" height="5" rx="1" fill="#E8E1C9"/>
+  <rect x="80" y="94" width="20" height="5" rx="1" fill="#E8E1C9"/>
+</svg>

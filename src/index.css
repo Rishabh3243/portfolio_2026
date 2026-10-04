@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #E8E1C9;
+    color: #39402F;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  /* Custom earthy scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #E8E1C9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C8BE9E;
+    border-radius: 9999px;
+    border: 2px solid #E8E1C9;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8A9A62;
+  }
+}
+
+@layer utilities {
+  /* Physical warm cream paper card panel */
+  .paper-card {
+    background-color: #F2ECD8;
+    border: 1px solid #DCD4BC;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px -4px rgba(57, 64, 47, 0.07);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .paper-card-light {
+    background-color: #F6F0DC;
+    border: 1px solid #DCD4BC;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px -4px rgba(57, 64, 47, 0.07);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .paper-card-hover {
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .paper-card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -4px rgba(57, 64, 47, 0.12);
+    border-color: #C8BE9E;
+  }
+
+  /* Soft organic paper texture background */
+  .cozy-paper-pattern {
+    background-color: #E8E1C9;
+    background-image: radial-gradient(#D5CCA8 0.75px, transparent 0.75px);
+    background-size: 24px 24px;
+  }
+
+  /* Hide scrollbar utility */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Accessibility: reduce motion when user prefers */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

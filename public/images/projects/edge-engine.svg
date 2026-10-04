@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <defs>
+    <linearGradient id="eeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7EE" />
+      <stop offset="100%" stop-color="#F2ECD8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#eeBg)" />
+  <rect width="596" height="356" x="2" y="2" rx="14" stroke="#DCD4BC" stroke-width="2" />
+
+  <!-- Subtle grid pattern -->
+  <g stroke="#E0D7BE" stroke-width="0.75" stroke-dasharray="2 4">
+    <line x1="40" y1="70" x2="560" y2="70" />
+    <line x1="40" y1="140" x2="560" y2="140" />
+    <line x1="40" y1="210" x2="560" y2="210" />
+    <line x1="40" y1="280" x2="560" y2="280" />
+  </g>
+
+  <!-- Title Badge -->
+  <g transform="translate(35, 25)">
+    <rect x="0" y="0" width="160" height="24" rx="12" fill="#E8E1C9" stroke="#D4CCA8" stroke-width="1" />
+    <circle cx="12" cy="12" r="4" fill="#405C3A" />
+    <text x="24" y="16" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">EDGE AI VISION ENGINE</text>
+    <text x="175" y="16" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="10">CES &bull; Embedded World &bull; EuroShop</text>
+  </g>
+
+  <!-- Hardware Target Matrix (4 Silicon Panels) -->
+  <g transform="translate(35, 75)">
+    <!-- Platform 1: NVIDIA Jetson -->
+    <rect x="0" y="0" width="122" height="150" rx="10" fill="#E8E1C9" stroke="#D4CCA8" stroke-width="1.5" />
+    <rect x="12" y="14" width="98" height="22" rx="6" fill="#405C3A" />
+    <text x="61" y="29" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">NVIDIA Jetson</text>
+    <text x="61" y="55" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">Orin Nano / AGX</text>
+    <rect x="12" y="70" width="98" height="26" rx="6" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1" />
+    <text x="61" y="86" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">TensorRT FP16</text>
+    <rect x="12" y="106" width="98" height="28" rx="6" fill="#E8E1C9" stroke="#8A9A62" stroke-width="1" />
+    <text x="61" y="124" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">+30% FPS Uplift</text>
+
+    <!-- Platform 2: NXP i.MX 8M Plus -->
+    <rect x="136" y="0" width="122" height="150" rx="10" fill="#E8E1C9" stroke="#D4CCA8" stroke-width="1.5" />
+    <rect x="148" y="14" width="98" height="22" rx="6" fill="#506B42" />
+    <text x="197" y="29" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">NXP i.MX 8M</text>
+    <text x="197" y="55" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">2.3 TOPS NPU</text>
+    <rect x="148" y="70" width="98" height="26" rx="6" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1" />
+    <text x="197" y="86" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">eIQ / ARM NN</text>
+    <rect x="148" y="106" width="98" height="28" rx="6" fill="#E8E1C9" stroke="#8A9A62" stroke-width="1" />
+    <text x="197" y="124" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">-50% Memory RAM</text>
+
+    <!-- Platform 3: Rockchip RK3588 -->
+    <rect x="272" y="0" width="122" height="150" rx="10" fill="#E8E1C9" stroke="#D4CCA8" stroke-width="1.5" />
+    <rect x="284" y="14" width="98" height="22" rx="6" fill="#405C3A" />
+    <text x="333" y="29" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">Rockchip NPU</text>
+    <text x="333" y="55" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">RK3588 Tri-Core</text>
+    <rect x="284" y="70" width="98" height="26" rx="6" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1" />
+    <text x="333" y="86" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">RKNN Toolkit 2</text>
+    <rect x="284" y="106" width="98" height="28" rx="6" fill="#E8E1C9" stroke="#8A9A62" stroke-width="1" />
+    <text x="333" y="124" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">Zero Drops 60fps</text>
+
+    <!-- Platform 4: Axelera AI Metis -->
+    <rect x="408" y="0" width="122" height="150" rx="10" fill="#E8E1C9" stroke="#B59A5A" stroke-width="1.5" />
+    <rect x="420" y="14" width="98" height="22" rx="6" fill="#B59A5A" />
+    <text x="469" y="29" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">Axelera Metis</text>
+    <text x="469" y="55" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">214 TOPS D-IMC</text>
+    <rect x="420" y="70" width="98" height="26" rx="6" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1" />
+    <text x="469" y="86" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">Voyager SDK</text>
+    <rect x="420" y="106" width="98" height="28" rx="6" fill="#FAF7EE" stroke="#B59A5A" stroke-width="1" />
+    <text x="469" y="124" fill="#344C30" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">Showcase Expo</text>
+  </g>
+
+  <!-- Bottom Pipeline Ribbon -->
+  <g transform="translate(35, 248)">
+    <rect x="0" y="0" width="530" height="75" rx="10" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="1" />
+    <text x="20" y="26" fill="#39402F" font-family="'DM Sans', sans-serif" font-size="12" font-weight="bold">Multi-Camera Ingestion &bull; RTSP &bull; CSI &bull; MIPI &bull; USB</text>
+    <text x="20" y="48" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="10">Quantized YOLOv8 + PaddleOCR &bull; End-to-End Realtime Inference on Embedded Linux</text>
+    <rect x="425" y="20" width="85" height="35" rx="8" fill="#405C3A" />
+    <text x="467" y="42" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">PRODUCTION</text>
+  </g>
+</svg>

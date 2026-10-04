@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="16" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <!-- Outer NPU Package -->
+  <rect x="20" y="20" width="80" height="80" rx="10" fill="#E8E1C9" stroke="#B59A5A" stroke-width="2"/>
+  <circle cx="28" cy="28" r="3" fill="#B59A5A"/>
+  
+  <!-- NPU Accelerator Die -->
+  <rect x="32" y="32" width="56" height="56" rx="6" fill="#39402F" stroke="#405C3A" stroke-width="1.5"/>
+  
+  <!-- Systolic Array / Neural Matrix Weights Engine -->
+  <!-- Interconnected Neural Nodes -->
+  <g stroke="#B59A5A" stroke-width="1" opacity="0.6">
+    <line x1="42" y1="44" x2="60" y2="44"/>
+    <line x1="60" y1="44" x2="78" y2="44"/>
+    <line x1="42" y1="60" x2="60" y2="60"/>
+    <line x1="60" y1="60" x2="78" y2="60"/>
+    <line x1="42" y1="76" x2="60" y2="76"/>
+    <line x1="60" y1="76" x2="78" y2="76"/>
+    
+    <line x1="42" y1="44" x2="42" y2="60"/>
+    <line x1="42" y1="60" x2="42" y2="76"/>
+    <line x1="60" y1="44" x2="60" y2="60"/>
+    <line x1="60" y1="60" x2="60" y2="76"/>
+    <line x1="78" y1="44" x2="78" y2="60"/>
+    <line x1="78" y1="60" x2="78" y2="76"/>
+
+    <!-- Diagonal neural paths -->
+    <line x1="42" y1="44" x2="60" y2="60"/>
+    <line x1="60" y1="44" x2="78" y2="60"/>
+    <line x1="42" y1="60" x2="60" y2="76"/>
+    <line x1="60" y1="60" x2="78" y2="76"/>
+  </g>
+
+  <!-- Multiply-Accumulate (MAC) Nodes -->
+  <circle cx="42" cy="44" r="4.5" fill="#405C3A" stroke="#FAF7EE" stroke-width="1"/>
+  <circle cx="60" cy="44" r="4.5" fill="#506B42" stroke="#FAF7EE" stroke-width="1"/>
+  <circle cx="78" cy="44" r="4.5" fill="#405C3A" stroke="#FAF7EE" stroke-width="1"/>
+  
+  <circle cx="42" cy="60" r="4.5" fill="#506B42" stroke="#FAF7EE" stroke-width="1"/>
+  <circle cx="60" cy="60" r="5.5" fill="#B59A5A" stroke="#FAF7EE" stroke-width="1.5"/>
+  <circle cx="78" cy="60" r="4.5" fill="#506B42" stroke="#FAF7EE" stroke-width="1"/>
+  
+  <circle cx="42" cy="76" r="4.5" fill="#405C3A" stroke="#FAF7EE" stroke-width="1"/>
+  <circle cx="60" cy="76" r="4.5" fill="#506B42" stroke="#FAF7EE" stroke-width="1"/>
+  <circle cx="78" cy="76" r="4.5" fill="#405C3A" stroke="#FAF7EE" stroke-width="1"/>
+  
+  <!-- TOPS INT8 Badge -->
+  <rect x="42" y="55" width="36" height="10" rx="3" fill="#FAF7EE" stroke="#405C3A" stroke-width="1"/>
+  <text x="60" y="63" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="bold" text-anchor="middle">INT8 TOPS</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="112" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" text-anchor="middle">NPU &bull; NEURAL ACCEL</text>
+</svg>

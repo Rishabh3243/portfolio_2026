@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <rect width="160" height="120" rx="14" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <rect x="35" y="15" width="90" height="90" rx="8" fill="#405C3A" stroke="#344C30" stroke-width="2"/>
+  
+  <!-- Tiny camera sensor on board -->
+  <circle cx="80" cy="45" r="14" fill="#39402F" stroke="#B59A5A" stroke-width="1.5"/>
+  <circle cx="80" cy="45" r="6" fill="#FAF7EE"/>
+  
+  <rect x="46" y="68" width="68" height="28" rx="3" fill="#E8E1C9" stroke="#8A9A62" stroke-width="1"/>
+  <text x="80" y="80" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" text-anchor="middle">NICLA VISION</text>
+  <text x="80" y="91" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="bold" text-anchor="middle">STM32H7 + 2MP CAM</text>
+</svg>

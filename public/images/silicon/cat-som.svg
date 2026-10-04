@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="16" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <!-- SOM Module Board (SO-DIMM / M.2 form factor) -->
+  <rect x="18" y="24" width="84" height="64" rx="6" fill="#E8E1C9" stroke="#39402F" stroke-width="2"/>
+  
+  <!-- Heatspreader / Shielding Can -->
+  <rect x="26" y="32" width="68" height="42" rx="4" fill="#39402F" stroke="#405C3A" stroke-width="1.5"/>
+  <rect x="32" y="38" width="56" height="30" rx="3" fill="#405C3A" stroke="#8A9A62" stroke-width="1"/>
+  <text x="60" y="56" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">SOM</text>
+  <text x="60" y="64" fill="#DCD4BC" font-family="'JetBrains Mono', monospace" font-size="6" text-anchor="middle">SYSTEM ON MODULE</text>
+  
+  <!-- Thermal screw notches -->
+  <path d="M18 40 A4 4 0 0 1 18 48" stroke="#39402F" stroke-width="2" fill="#FAF7EE"/>
+  <path d="M102 40 A4 4 0 0 0 102 48" stroke="#39402F" stroke-width="2" fill="#FAF7EE"/>
+  
+  <!-- 260-Pin Edge Connector Gold Fingers at bottom -->
+  <rect x="22" y="88" width="76" height="10" rx="1" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1"/>
+  <g fill="#B59A5A">
+    <rect x="25" y="88" width="2" height="10"/>
+    <rect x="29" y="88" width="2" height="10"/>
+    <rect x="33" y="88" width="2" height="10"/>
+    <rect x="37" y="88" width="2" height="10"/>
+    <rect x="41" y="88" width="2" height="10"/>
+    <rect x="45" y="88" width="2" height="10"/>
+    <!-- Key Notch in the connector -->
+    <rect x="52" y="88" width="5" height="12" fill="#FAF7EE"/>
+    <rect x="61" y="88" width="2" height="10"/>
+    <rect x="65" y="88" width="2" height="10"/>
+    <rect x="69" y="88" width="2" height="10"/>
+    <rect x="73" y="88" width="2" height="10"/>
+    <rect x="77" y="88" width="2" height="10"/>
+    <rect x="81" y="88" width="2" height="10"/>
+    <rect x="85" y="88" width="2" height="10"/>
+    <rect x="89" y="88" width="2" height="10"/>
+    <rect x="93" y="88" width="2" height="10"/>
+  </g>
+  
+  <!-- Label -->
+  <text x="60" y="112" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" text-anchor="middle">SO-DIMM / M.2</text>
+</svg>

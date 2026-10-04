@@ -1,0 +1,145 @@
+import { Project } from '../types';
+
+export const projectsData: Project[] = [
+  {
+    id: 'localdoc-ai',
+    title: 'LocalDoc AI – Local Multi-Turn RAG System',
+    category: 'GenAI',
+    shortDescription: 'Privacy-first document QA & multi-turn RAG pipeline with semantic chunking, persistent ChromaDB vector storage, and adaptive similarity-based query routing.',
+    fullDescription: 'Architected an end-to-end privacy-first local RAG system featuring semantic chunking and persistent vector retrieval with ChromaDB. Implemented threshold-based adaptive query routing to separate document-grounded queries from conversational small talk, reducing hallucinations. Integrated dual-layer rolling memory (recent context + neural summary) optimized for a 360M-parameter LLM, served via FastAPI backend with citation and retrieval-score inspection.',
+    technologies: ['Python', 'LangChain', 'ChromaDB', 'Transformers', 'Sentence-Transformers', 'FastAPI', 'React'],
+    image: '/images/projects/localdoc-ai.svg',
+    githubUrl: '#',
+    demoUrl: '#',
+    featured: true,
+    metrics: [
+      { label: 'Retrieval Latency', value: '18 ms' },
+      { label: 'LLM Parameters', value: '360M Local' },
+      { label: 'Routing Accuracy', value: '96.5%' },
+    ],
+    architecturePoints: [
+      'Semantic Chunking & Persistent ChromaDB Store',
+      'Threshold-based Adaptive Query Routing',
+      'Dual-Layer Rolling Conversation Memory (Recent + Neural Summary)',
+      'Source Citations & Semantic Score Inspection'
+    ],
+  },
+  {
+    id: 'multi-platform-edge-engine',
+    title: 'Multi-Platform Edge AI Vision Engine',
+    category: 'Edge AI',
+    shortDescription: 'Hardware-aware deep learning acceleration pipeline benchmarked across Jetson, NXP, Rockchip, and Axelera AI, exhibited at CES, Embedded World, and EuroShop.',
+    fullDescription: 'Designed, trained, and deployed end-to-end Computer Vision inference pipelines across diverse embedded hardware. Engineered hardware-aware model optimization and quantization pipelines, improving inference throughput by 30% and reducing memory consumption by up to 50% on resource-constrained edge devices. Adapted inference runtimes across NXP i.MX 8M Plus, NVIDIA Jetson, Rockchip RKNN, Axelera AI, and Raspberry Pi IMX500 with multi-protocol video ingestion.',
+    technologies: ['TensorRT', 'ONNX Runtime', 'RKNN', 'TFLite', 'YOLO', 'PaddleOCR', 'NVIDIA Jetson', 'NXP i.MX 8M', 'Bash'],
+    image: '/images/projects/edge-engine.svg',
+    githubUrl: '#',
+    demoUrl: '#',
+    featured: true,
+    hardware: ['NVIDIA Jetson (Orin, AGX)', 'NXP i.MX 8M Plus', 'Rockchip RK3588', 'Axelera AI Metis', 'Raspberry Pi IMX500'],
+    metrics: [
+      { label: 'Throughput Uplift', value: '+30% FPS' },
+      { label: 'Memory Reduction', value: 'Up to -50%' },
+      { label: 'Global Expos', value: 'CES, EW, EuroShop' },
+    ],
+    architecturePoints: [
+      'Multi-protocol ingestion: RTSP (IP), MIPI CSI, and USB cameras',
+      'FP16 and INT8 Post-Training Quantization (PTQ)',
+      'Automated Bash edge deployment workflows & headless monitoring',
+      'On-site client deployment and real-time hardware calibration'
+    ],
+  },
+  {
+    id: 'virtudrum',
+    title: 'VirtuDrum – Real-Time AI Virtual Drumming',
+    category: 'Computer Vision',
+    shortDescription: 'Interactive air drumming desktop application leveraging real-time 3D hand landmark tracking and spatial gesture recognition with sub-10ms audio latency.',
+    fullDescription: 'Designed an interactive virtual drumming application leveraging real-time 3D hand landmark tracking and gesture recognition via MediaPipe and OpenCV. Built an event-driven modular architecture featuring low-latency Air Drum triggering, rhythm gameplay modes, and cross-platform desktop execution. Implemented dual-mode local/cloud score synchronization using a lightweight Flask REST backend and SQLite database.',
+    technologies: ['Python', 'OpenCV', 'MediaPipe', 'Qt / PyQt', 'Flask', 'SQLite'],
+    image: '/images/projects/virtudrum.svg',
+    githubUrl: '#',
+    demoUrl: '#',
+    featured: true,
+    metrics: [
+      { label: 'Tracking Speed', value: '60 FPS' },
+      { label: 'Landmark Latency', value: '4.2 ms' },
+      { label: 'Audio Delay', value: '< 8 ms' },
+    ],
+    architecturePoints: [
+      '3D Hand Landmark Pose Estimation using MediaPipe',
+      'Real-time Spatial Collision Detection & Velocity Estimation',
+      'Low-latency Event-Driven Audio Triggering',
+      'Dual-Mode Local & Cloud Synchronization'
+    ],
+  },
+  {
+    id: 'driver-safety-system',
+    title: 'Driver Behavior Monitoring & Safety System',
+    category: 'Computer Vision',
+    shortDescription: 'In-cabin automotive safety system analyzing facial landmarks, Eye Aspect Ratio (EAR), and real-time YOLOv8 mobile phone detection on edge compute units.',
+    fullDescription: 'Developed an intelligent in-cabin safety system analyzing facial landmarks and eye aspect ratios in real time to detect drowsiness, distraction, and fatigue. Integrated YOLOv8 object detection for real-time mobile phone usage detection and negative emotion classification, triggering immediate safety alerts while sustaining reliable real-time FPS on constrained edge compute units.',
+    technologies: ['Python', 'OpenCV', 'YOLOv8', 'PyTorch', 'Deep Learning'],
+    image: '/images/projects/driver-safety.svg',
+    githubUrl: '#',
+    demoUrl: '#',
+    featured: false,
+    hardware: ['Edge Compute Units', 'NIR In-Cabin Cameras'],
+    metrics: [
+      { label: 'Frame Rate', value: '60 FPS' },
+      { label: 'Inference Latency', value: '16.4 ms' },
+      { label: 'Phone Detect Conf', value: '94%+' },
+    ],
+    architecturePoints: [
+      'Eye Aspect Ratio (EAR) & PERCLOS Drowsiness Computation',
+      'YOLOv8 Distraction & Mobile Phone Usage Detection',
+      'Negative Emotion & Fatigue Classification',
+      'Real-time Alert Chime & Telemetry Logging'
+    ],
+  },
+  {
+    id: 'edge-parking-solution',
+    title: 'Edge AI Real-Time Car Parking Solution',
+    category: 'Edge AI',
+    shortDescription: 'Automated parking spot occupancy detection engine developed for Japan IT Week with Deeper-i and DeepX NPU accelerators.',
+    fullDescription: 'Engineered an end-to-end Edge AI car parking solution for Japan IT Week in collaboration with Deeper-i, enabling real-time parking space detection and monitoring. Built FastAPI-based REST APIs for model inference and integration with application backends, with INT8 quantization for sustained high-temperature edge operations.',
+    technologies: ['DeepX NPU', 'Deeper-i NPU', 'OpenCV', 'FastAPI', 'Python', 'Docker'],
+    image: '/images/projects/edge-parking.svg',
+    githubUrl: '#',
+    demoUrl: '#',
+    featured: false,
+    hardware: ['DeepX NPU', 'Deeper-i Edge Device'],
+    metrics: [
+      { label: 'Inference Speed', value: '< 15 ms' },
+      { label: 'Occupancy Accuracy', value: '98.1%' },
+      { label: 'Frame Drops', value: '0%' },
+    ],
+    architecturePoints: [
+      'NPU-accelerated Vehicle Localization & Spot Mapping',
+      'Sub-15ms Live Occupancy State Updates',
+      'FastAPI REST Microservice Integration',
+      'Zero-drift Edge Deployment Protocol'
+    ],
+  },
+  {
+    id: 'agent-orchestrator',
+    title: 'Autonomous Agentic Task & Workflow Orchestrator',
+    category: 'AI Agents',
+    shortDescription: 'Stateful multi-agent system utilizing LangGraph for multi-step reasoning, cyclic tool calling, API integration, and self-correcting execution pipelines.',
+    fullDescription: 'Engineered a practical autonomous AI agent architecture focusing on actionable execution rather than chat interfaces. Powered by LangGraph state graphs, the system implements structured tool invocation, dynamic API execution, schema validation, and multi-step reasoning loops with cycle detection and human-in-the-loop checkpoints.',
+    technologies: ['LangGraph', 'Python', 'FastAPI', 'Tool Calling', 'Vector DB', 'REST APIs'],
+    image: '/images/projects/agent-orchestrator.svg',
+    githubUrl: '#',
+    demoUrl: '#',
+    featured: true,
+    metrics: [
+      { label: 'Reasoning Graph', value: 'LangGraph' },
+      { label: 'Tool Sandboxes', value: 'Multi-Tool' },
+      { label: 'Execution Mode', value: 'Stateful / Cyclic' },
+    ],
+    architecturePoints: [
+      'Stateful Graph Execution with LangGraph StateMachine',
+      'Function Calling & Dynamic Tool Dispatching',
+      'Multi-Step Reasoning & Error Correction Feedback',
+      'Decoupled API Execution Sandbox'
+    ],
+  },
+];

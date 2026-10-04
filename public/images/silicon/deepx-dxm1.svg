@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <rect width="160" height="120" rx="14" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <rect x="25" y="15" width="110" height="90" rx="8" fill="#39402F" stroke="#405C3A" stroke-width="2"/>
+  <rect x="36" y="26" width="88" height="68" rx="6" fill="#344C30" stroke="#B59A5A" stroke-width="1.5"/>
+  
+  <text x="80" y="48" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">DEEPX &bull; DEEPER-I</text>
+  <text x="80" y="64" fill="#B59A5A" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">DX-M1 NPU</text>
+  
+  <rect x="42" y="72" width="76" height="15" rx="4" fill="#405C3A"/>
+  <text x="80" y="83" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">SUB-5W VISION NPU</text>
+  
+  <circle cx="31" cy="21" r="2.5" fill="#FAF7EE"/>
+</svg>

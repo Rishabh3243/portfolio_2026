@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="16" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <!-- Outer CPU Package -->
+  <rect x="20" y="20" width="80" height="80" rx="10" fill="#E8E1C9" stroke="#405C3A" stroke-width="2"/>
+  <circle cx="28" cy="28" r="3" fill="#405C3A"/>
+  
+  <!-- CPU Core Die -->
+  <rect x="32" y="32" width="56" height="56" rx="6" fill="#39402F" stroke="#B59A5A" stroke-width="1.5"/>
+  
+  <!-- 4/8 CPU Core Architecture Grid -->
+  <rect x="38" y="38" width="20" height="18" rx="2" fill="#405C3A" stroke="#506B42" stroke-width="1"/>
+  <text x="48" y="50" fill="#F6F0DC" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">CORE 0</text>
+  
+  <rect x="62" y="38" width="20" height="18" rx="2" fill="#405C3A" stroke="#506B42" stroke-width="1"/>
+  <text x="72" y="50" fill="#F6F0DC" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">CORE 1</text>
+  
+  <!-- Shared L2/L3 Cache -->
+  <rect x="38" y="59" width="44" height="8" rx="2" fill="#B59A5A"/>
+  <text x="60" y="66" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="bold" text-anchor="middle">SHARED L3 CACHE</text>
+  
+  <rect x="38" y="70" width="20" height="14" rx="2" fill="#405C3A" stroke="#506B42" stroke-width="1"/>
+  <text x="48" y="80" fill="#F6F0DC" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="bold" text-anchor="middle">CORE 2</text>
+  
+  <rect x="62" y="70" width="20" height="14" rx="2" fill="#405C3A" stroke="#506B42" stroke-width="1"/>
+  <text x="72" y="80" fill="#F6F0DC" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="bold" text-anchor="middle">CORE 3</text>
+  
+  <!-- Gold bus lines -->
+  <line x1="12" y1="50" x2="20" y2="50" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="12" y1="70" x2="20" y2="70" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="100" y1="50" x2="108" y2="50" stroke="#8A9A62" stroke-width="2"/>
+  <line x1="100" y1="70" x2="108" y2="70" stroke="#8A9A62" stroke-width="2"/>
+
+  <!-- Subtitle -->
+  <text x="60" y="112" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" text-anchor="middle">CPU &bull; ARM / HOST</text>
+</svg>

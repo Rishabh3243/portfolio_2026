@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <defs>
+    <linearGradient id="vPaperBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7EE" />
+      <stop offset="100%" stop-color="#F2ECD8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#vPaperBg)" />
+  <rect width="596" height="356" x="2" y="2" rx="14" stroke="#DCD4BC" stroke-width="2" />
+
+  <!-- Vision HUD Header -->
+  <rect x="40" y="25" width="520" height="38" rx="8" fill="#E8E1C9" stroke="#D4CCA8" stroke-width="1" />
+  <circle cx="58" cy="44" r="4" fill="#405C3A" />
+  <text x="70" y="48" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">VirtuDrum // 3D Hand Tracking &amp; Gesture Engine</text>
+  <rect x="440" y="32" width="105" height="24" rx="12" fill="#405C3A" />
+  <text x="492" y="48" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">60 FPS REALTIME</text>
+
+  <!-- Virtual Drum Kit Zone -->
+  <g transform="translate(60, 85)">
+    <!-- Snare -->
+    <ellipse cx="100" cy="120" rx="60" ry="32" fill="#E8E1C9" stroke="#405C3A" stroke-width="2" />
+    <ellipse cx="100" cy="120" rx="42" ry="20" fill="#FAF7EE" stroke="#8A9A62" stroke-width="1.5" />
+    <text x="100" y="124" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">SNARE</text>
+
+    <!-- Hi-Hat -->
+    <ellipse cx="230" cy="80" rx="55" ry="26" fill="#E8E1C9" stroke="#B59A5A" stroke-width="2" />
+    <ellipse cx="230" cy="80" rx="35" ry="16" fill="#FAF7EE" stroke="#B59A5A" stroke-width="1.5" />
+    <text x="230" y="84" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">HI-HAT</text>
+
+    <!-- Bass / Tom -->
+    <ellipse cx="360" cy="120" rx="60" ry="32" fill="#E8E1C9" stroke="#506B42" stroke-width="2" />
+    <ellipse cx="360" cy="120" rx="42" ry="20" fill="#FAF7EE" stroke="#8A9A62" stroke-width="1.5" />
+    <text x="360" y="124" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">BASS TOM</text>
+
+    <!-- 3D Hand Tracking Landmark Points -->
+    <g stroke="#405C3A" stroke-width="1.5">
+      <!-- Wrist to Palm -->
+      <line x1="80" y1="210" x2="100" y2="175" />
+      <line x1="100" y1="175" x2="90" y2="145" />
+      <line x1="100" y1="175" x2="105" y2="135" />
+      <line x1="100" y1="175" x2="120" y2="140" />
+
+      <!-- Nodes -->
+      <circle cx="80" cy="210" r="5" fill="#FAF7EE" stroke="#344C30" stroke-width="2" />
+      <circle cx="100" cy="175" r="5" fill="#FAF7EE" stroke="#405C3A" stroke-width="2" />
+      <circle cx="90" cy="145" r="4" fill="#8A9A62" />
+      <circle cx="105" cy="135" r="5" fill="#405C3A" stroke="#FAF7EE" stroke-width="2" />
+      <circle cx="120" cy="140" r="4" fill="#8A9A62" />
+    </g>
+
+    <text x="135" y="195" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold">Landmark Trigger &lt;10ms</text>
+  </g>
+
+  <!-- Bottom Details Bar -->
+  <g transform="translate(40, 280)">
+    <rect x="0" y="0" width="520" height="48" rx="8" fill="#E8E1C9" stroke="#DCD4BC" stroke-width="1" />
+    <text x="20" y="22" fill="#39402F" font-family="'DM Sans', sans-serif" font-size="11" font-weight="bold">MediaPipe Hands &bull; OpenCV Spatial Geometry &bull; PyQt5 Audio Engine</text>
+    <text x="20" y="38" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="9">Dual-Mode Local &amp; Cloud Score Sync via Flask REST Backend &amp; SQLite</text>
+    <rect x="420" y="12" width="85" height="24" rx="6" fill="#405C3A" />
+    <text x="462" y="28" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">SUB-10MS</text>
+  </g>
+</svg>

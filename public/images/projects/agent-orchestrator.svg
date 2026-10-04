@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <defs>
+    <linearGradient id="aPaperBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7EE" />
+      <stop offset="100%" stop-color="#F2ECD8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="360" rx="16" fill="url(#aPaperBg)" />
+  <rect width="596" height="356" x="2" y="2" rx="14" stroke="#DCD4BC" stroke-width="2" />
+
+  <!-- Subtle grid pattern -->
+  <g stroke="#E0D7BE" stroke-width="0.75" stroke-dasharray="2 4">
+    <line x1="40" y1="65" x2="560" y2="65" />
+    <line x1="40" y1="130" x2="560" y2="130" />
+    <line x1="40" y1="195" x2="560" y2="195" />
+    <line x1="40" y1="260" x2="560" y2="260" />
+  </g>
+
+  <!-- Header Badge -->
+  <g transform="translate(40, 24)">
+    <rect x="0" y="0" width="165" height="24" rx="12" fill="#E8E1C9" stroke="#D4CCA8" stroke-width="1" />
+    <circle cx="12" cy="12" r="4" fill="#405C3A" />
+    <text x="24" y="16" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold">LANGGRAPH AGENTS</text>
+    <text x="180" y="16" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="10">Stateful Tool Execution Loop</text>
+  </g>
+
+  <!-- Agent State Graph Nodes -->
+  <g transform="translate(40, 75)">
+    <!-- Node 1: Planner -->
+    <rect x="0" y="35" width="105" height="80" rx="10" fill="#E8E1C9" stroke="#D4CCA8" stroke-width="1.5" />
+    <rect x="12" y="45" width="81" height="20" rx="4" fill="#506B42" />
+    <text x="52" y="59" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">PLANNER</text>
+    <text x="52" y="85" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">Goal Decomp</text>
+    <text x="52" y="100" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">DAG Steps</text>
+
+    <!-- Edge 1 -->
+    <path d="M105 75 H145" stroke="#405C3A" stroke-width="2" />
+    <polygon points="145,71 153,75 145,79" fill="#405C3A" />
+
+    <!-- Node 2: State Router / LLM Core -->
+    <rect x="155" y="20" width="135" height="110" rx="12" fill="#FAF7EE" stroke="#405C3A" stroke-width="2" />
+    <circle cx="222" cy="50" r="18" fill="#E8E1C9" stroke="#8A9A62" stroke-width="1.5" />
+    <text x="222" y="54" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="bold" text-anchor="middle">&lt;/&gt;</text>
+    <text x="222" y="86" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">STATE MACHINE</text>
+    <rect x="175" y="98" width="95" height="20" rx="6" fill="#E8E1C9" />
+    <text x="222" y="112" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">Cyclic Loop</text>
+
+    <!-- Edge 2 -->
+    <path d="M290 75 H330" stroke="#405C3A" stroke-width="2" />
+    <polygon points="330,71 338,75 330,79" fill="#405C3A" />
+
+    <!-- Node 3: Sandboxed Tools -->
+    <rect x="340" y="20" width="180" height="110" rx="12" fill="#E8E1C9" stroke="#B59A5A" stroke-width="1.5" />
+    <text x="430" y="42" fill="#39402F" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">SANDBOXED TOOLS</text>
+    
+    <!-- Tool 1 -->
+    <rect x="352" y="52" width="74" height="28" rx="6" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1" />
+    <text x="389" y="70" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">SQL/Vector</text>
+    
+    <!-- Tool 2 -->
+    <rect x="434" y="52" width="74" height="28" rx="6" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1" />
+    <text x="471" y="70" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">HTTP API</text>
+
+    <!-- Tool 3 -->
+    <rect x="352" y="88" width="74" height="28" rx="6" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1" />
+    <text x="389" y="106" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">Python Exec</text>
+
+    <!-- Tool 4 -->
+    <rect x="434" y="88" width="74" height="28" rx="6" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1" />
+    <text x="471" y="106" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">Web Scraper</text>
+
+    <!-- Cycle Back Arrow from Tools to Router -->
+    <path d="M430 130 V155 H222 V130" stroke="#B59A5A" stroke-width="2" stroke-dasharray="4 4" />
+    <polygon points="218,135 222,125 226,135" fill="#B59A5A" />
+    <text x="326" y="168" fill="#B59A5A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">Self-Correction &bull; Cyclic Feedback</text>
+  </g>
+
+  <!-- Bottom Verification Console Badge -->
+  <g transform="translate(40, 275)">
+    <rect x="0" y="0" width="520" height="50" rx="10" fill="#E8E1C9" stroke="#DCD4BC" stroke-width="1" />
+    <circle cx="25" cy="25" r="8" fill="#405C3A" />
+    <text x="25" y="29" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">&#x2713;</text>
+    <text x="45" y="23" fill="#39402F" font-family="'DM Sans', sans-serif" font-size="12" font-weight="bold">Deterministic Checkpoint Persistence</text>
+    <text x="45" y="38" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="10">LangGraph StateGraph &bull; Decoupled REST Microservices &bull; Zero Hallucination</text>
+    <rect x="425" y="14" width="80" height="22" rx="6" fill="#405C3A" />
+    <text x="465" y="29" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">STATEFUL</text>
+  </g>
+</svg>

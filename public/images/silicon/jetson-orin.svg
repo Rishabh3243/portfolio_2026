@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <rect width="160" height="120" rx="14" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <!-- Silicon Package Body -->
+  <rect x="25" y="15" width="110" height="90" rx="10" fill="#39402F" stroke="#405C3A" stroke-width="2"/>
+  
+  <!-- Heatspreader Metallic Core -->
+  <rect x="35" y="25" width="90" height="70" rx="8" fill="#405C3A" stroke="#8A9A62" stroke-width="1.5"/>
+  
+  <!-- NVIDIA Green Accent stripe -->
+  <rect x="35" y="25" width="6" height="70" rx="2" fill="#76B900"/>
+  
+  <text x="82" y="48" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">NVIDIA</text>
+  <text x="82" y="64" fill="#F6F0DC" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">JETSON ORIN</text>
+  
+  <!-- Architecture specs tag -->
+  <rect x="48" y="72" width="68" height="15" rx="4" fill="#344C30"/>
+  <text x="82" y="83" fill="#B59A5A" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">AMPERE &bull; 40 TOPS</text>
+  
+  <!-- Corner notch -->
+  <circle cx="32" cy="22" r="2.5" fill="#FAF7EE"/>
+</svg>

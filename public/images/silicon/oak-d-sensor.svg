@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <rect width="160" height="120" rx="14" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <rect x="15" y="38" width="130" height="44" rx="8" fill="#405C3A" stroke="#344C30" stroke-width="2"/>
+  
+  <!-- Left Mono Sensor -->
+  <circle cx="34" cy="60" r="9" fill="#39402F" stroke="#FAF7EE" stroke-width="1.5"/>
+  <circle cx="34" cy="60" r="4" fill="#B59A5A"/>
+  
+  <!-- Center 4K RGB Camera + Myriad X / RVC2 AI SoC -->
+  <circle cx="80" cy="60" r="13" fill="#39402F" stroke="#B59A5A" stroke-width="2"/>
+  <circle cx="80" cy="60" r="7" fill="#FAF7EE"/>
+  
+  <!-- Right Mono Sensor -->
+  <circle cx="126" cy="60" r="9" fill="#39402F" stroke="#FAF7EE" stroke-width="1.5"/>
+  <circle cx="126" cy="60" r="4" fill="#B59A5A"/>
+  
+  <text x="80" y="28" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="bold" text-anchor="middle">LUXONIS OAK-D</text>
+  <text x="80" y="100" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="7" font-weight="bold" text-anchor="middle">ON-DEVICE SPATIAL AI &bull; 4 TFLOPS</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <rect width="160" height="120" rx="14" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <!-- SO-DIMM Board -->
+  <rect x="22" y="24" width="116" height="66" rx="4" fill="#39402F" stroke="#405C3A" stroke-width="2"/>
+  
+  <!-- Heatspreader -->
+  <rect x="34" y="32" width="92" height="46" rx="4" fill="#405C3A" stroke="#76B900" stroke-width="1.5"/>
+  <text x="80" y="52" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">JETSON ORIN NX</text>
+  <text x="80" y="66" fill="#76B900" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="bold" text-anchor="middle">260-PIN SO-DIMM SOM</text>
+  
+  <!-- Edge notch screw cutouts -->
+  <path d="M22 42 A5 5 0 0 1 22 54" stroke="#405C3A" stroke-width="2" fill="#FAF7EE"/>
+  <path d="M138 42 A5 5 0 0 0 138 54" stroke="#405C3A" stroke-width="2" fill="#FAF7EE"/>
+
+  <!-- 260-Pin Gold Connector -->
+  <rect x="26" y="90" width="108" height="12" rx="1" fill="#FAF7EE" stroke="#D4CCA8" stroke-width="1"/>
+  <g fill="#B59A5A">
+    <rect x="30" y="90" width="3" height="12"/>
+    <rect x="36" y="90" width="3" height="12"/>
+    <rect x="42" y="90" width="3" height="12"/>
+    <rect x="48" y="90" width="3" height="12"/>
+    <rect x="54" y="90" width="3" height="12"/>
+    <rect x="60" y="90" width="3" height="12"/>
+    <!-- Key notch -->
+    <rect x="68" y="90" width="6" height="14" fill="#FAF7EE"/>
+    <rect x="78" y="90" width="3" height="12"/>
+    <rect x="84" y="90" width="3" height="12"/>
+    <rect x="90" y="90" width="3" height="12"/>
+    <rect x="96" y="90" width="3" height="12"/>
+    <rect x="102" y="90" width="3" height="12"/>
+    <rect x="108" y="90" width="3" height="12"/>
+    <rect x="114" y="90" width="3" height="12"/>
+    <rect x="120" y="90" width="3" height="12"/>
+    <rect x="126" y="90" width="3" height="12"/>
+  </g>
+</svg>

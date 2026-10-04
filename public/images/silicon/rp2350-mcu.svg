@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" fill="none">
+  <rect width="160" height="120" rx="14" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  
+  <rect x="35" y="15" width="90" height="90" rx="8" fill="#39402F" stroke="#405C3A" stroke-width="2"/>
+  
+  <circle cx="45" cy="25" r="3" fill="#FAF7EE"/>
+  
+  <rect x="44" y="28" width="72" height="64" rx="4" fill="#344C30" stroke="#8A9A62" stroke-width="1.5"/>
+  <text x="80" y="50" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">RASPBERRY PI</text>
+  <text x="80" y="66" fill="#B59A5A" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="bold" text-anchor="middle">RP2350</text>
+  
+  <rect x="48" y="74" width="64" height="12" rx="3" fill="#405C3A"/>
+  <text x="80" y="83" fill="#FAF7EE" font-family="'JetBrains Mono', monospace" font-size="6" font-weight="bold" text-anchor="middle">M33 + HAZARD3 RISC-V</text>
+  
+  <!-- Side pins -->
+  <g stroke="#B59A5A" stroke-width="2">
+    <line x1="25" y1="35" x2="35" y2="35"/>
+    <line x1="25" y1="50" x2="35" y2="50"/>
+    <line x1="25" y1="65" x2="35" y2="65"/>
+    <line x1="25" y1="80" x2="35" y2="80"/>
+    
+    <line x1="125" y1="35" x2="135" y2="35"/>
+    <line x1="125" y1="50" x2="135" y2="50"/>
+    <line x1="125" y1="65" x2="135" y2="65"/>
+    <line x1="125" y1="80" x2="135" y2="80"/>
+  </g>
+</svg>

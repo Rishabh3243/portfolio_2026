@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <linearGradient id="cvmPaperBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF7EE" />
+      <stop offset="100%" stop-color="#F2ECD8" />
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="240" rx="16" fill="url(#cvmPaperBg)" />
+  <rect width="396" height="236" x="2" y="2" rx="14" stroke="#DCD4BC" stroke-width="2" />
+
+  <!-- Medal Icon in Forest Green & Gold -->
+  <g transform="translate(160, 20)">
+    <!-- Ribbon -->
+    <path d="M25 10 L40 45 L55 10" fill="#405C3A" />
+    <path d="M20 10 L40 45 L30 10" fill="#344C30" />
+    <path d="M50 10 L40 45 L60 10" fill="#344C30" />
+    <!-- Medal Round -->
+    <circle cx="40" cy="62" r="24" fill="#B59A5A" />
+    <circle cx="40" cy="62" r="18" fill="#FAF7EE" stroke="#B59A5A" stroke-width="1.5" />
+    <polygon points="40,52 43,59 50,60 45,65 47,72 40,68 33,72 35,65 30,60 37,59" fill="#B59A5A" />
+  </g>
+
+  <text x="200" y="145" fill="#39402F" font-family="'DM Sans', sans-serif" font-size="16" font-weight="bold" text-anchor="middle">CVM Gaurav Puraskar</text>
+  <rect x="115" y="160" width="170" height="22" rx="6" fill="#E8E1C9" stroke="#D4CCA8" stroke-width="1" />
+  <text x="200" y="175" fill="#405C3A" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">Charutar Vidya Mandal</text>
+  <text x="200" y="205" fill="#77745F" font-family="'JetBrains Mono', monospace" font-size="10" text-anchor="middle">Honored for exceptional technical &amp; national laurels</text>
+</svg>
