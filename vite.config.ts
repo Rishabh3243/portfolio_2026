@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => {
           const data = JSON.parse(body || '{}');
           const gmailUser = env.GMAIL_USER || process.env.GMAIL_USER;
           const gmailPass = env.GMAIL_APP_PASSWORD || process.env.GMAIL_APP_PASSWORD;
-          const recipient = env.VITE_RECIPIENT_EMAIL || process.env.VITE_RECIPIENT_EMAIL || gmailUser;
+          const recipient = env.RECIPIENT_EMAIL || process.env.RECIPIENT_EMAIL || gmailUser;
 
           if (
             !gmailUser ||
