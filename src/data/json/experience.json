@@ -7,7 +7,7 @@
     "period": "Sep 2026 – Present",
     "duration": "Present",
     "category": "work",
-    "logo": "/images/experience/universal-software.svg",
+    "logo": "/images/experience/universal-software.png",
     "orgUrl": "https://www.universal-software.com/",
     "points": [
       "Engineering enterprise-grade LLM applications and Retrieval-Augmented Generation (RAG) architectures with multi-turn conversational grounding.",
@@ -38,7 +38,7 @@
     "period": "Sep 2025 – Aug 2026",
     "duration": "1 Year",
     "category": "work",
-    "logo": "/images/experience/weboccult.svg",
+    "logo": "/images/experience/weboccult.png",
     "orgUrl": "https://www.weboccult.com/",
     "points": [
       "Designed, trained, and deployed end-to-end Computer Vision inference pipelines for real-time Edge AI applications across diverse embedded hardware platforms.",
@@ -78,7 +78,7 @@
     "period": "Jan 2025 – Aug 2025",
     "duration": "8 Months",
     "category": "work",
-    "logo": "/images/experience/weboccult.svg",
+    "logo": "/images/experience/weboccult.png",
     "orgUrl": "https://www.weboccult.com/",
     "points": [
       "Worked with OpenCV, NLP, dataset annotation, and AI inference pipeline development on DeepX and Deeper-i NPUs.",
@@ -107,7 +107,7 @@
     "period": "May 2024 – Jun 2024",
     "duration": "2 Months",
     "category": "work",
-    "logo": "/images/experience/edunet.svg",
+    "logo": "/images/experience/edunet.png",
     "orgUrl": "https://edunetfoundation.org/",
     "points": [
       "Built a Driver Behavior Monitoring System utilizing computer vision and neural networks for real-time driver state and facial landmark analysis.",
@@ -132,8 +132,8 @@
     "period": "Sep 2023 – May 2024",
     "duration": "9 Months",
     "category": "voluntary",
-    "logo": "/images/experience/geeksforgeeks.svg",
-    "orgUrl": "https://www.geeksforgeeks.org/",
+    "logo": "/images/experience/geeksforgeeks.png",
+    "orgUrl": "https://geeksforgeeks-six.vercel.app/",
     "points": [
       "Led a core student team to organize technical bootcamps, coding contests, and developer workshops impacting 500+ student participants."
     ],
@@ -156,8 +156,8 @@
     "period": "Oct 2022 – Apr 2023",
     "duration": "7 Months",
     "category": "voluntary",
-    "logo": "/images/experience/geeksforgeeks.svg",
-    "orgUrl": "https://www.geeksforgeeks.org/",
+    "logo": "/images/experience/geeksforgeeks.png",
+    "orgUrl": "https://geeksforgeeks-six.vercel.app/",
     "points": [
       "Establish the GFG Student Chapter at BVM and built a core team to foster student engagement, technical learning, and community development."
     ],
@@ -179,8 +179,8 @@
     "period": "Sep 2022 – Apr 2023",
     "duration": "8 Months",
     "category": "voluntary",
-    "logo": "/images/experience/codechef.svg",
-    "orgUrl": "https://www.codechef.com/",
+    "logo": "/images/experience/codechef.png",
+    "orgUrl": "https://in.linkedin.com/company/codechef-bvm-chapter",
     "points": [
       "Contributed to frontend web development and platform maintenance for campus-wide competitive programming initiatives."
     ],
@@ -202,8 +202,8 @@
     "period": "Sep 2022 – Apr 2023",
     "duration": "8 Months",
     "category": "voluntary",
-    "logo": "/images/experience/gdsc.svg",
-    "orgUrl": "https://developers.google.com/community/gdsc",
+    "logo": "/images/experience/gdsc.png",
+    "orgUrl": "https://www.bvmengineering.ac.in/GDSC/",
     "points": [
       "Assisted in orchestrating open-source workshops, hackathons, and study jams on modern software development and cloud technologies."
     ],
