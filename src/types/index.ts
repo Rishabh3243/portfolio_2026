@@ -52,6 +52,8 @@ export interface Experience {
   points: string[];
   technologies: string[];
   keyAchievements?: string[];
+  logo?: string;
+  orgUrl?: string;
 }
 
 export interface Achievement {

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  <circle cx="50" cy="50" r="36" fill="#E8E1C9" opacity="0.6"/>
+  <!-- CodeChef Chef Hat Emblem -->
+  <!-- Chef Hat Poufs -->
+  <circle cx="50" cy="36" r="14" fill="#5B4636"/>
+  <circle cx="37" cy="42" r="12" fill="#5B4636"/>
+  <circle cx="63" cy="42" r="12" fill="#5B4636"/>
+  <!-- Hat Base / Band -->
+  <path d="M30 48 H70 L67 66 H33 L30 48 Z" fill="#5B4636"/>
+  <!-- Code Angle Brackets on Band -->
+  <path d="M42 54 L36 58 L42 62" stroke="#FAF7EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M58 54 L64 58 L58 62" stroke="#FAF7EE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="52" y1="53" x2="48" y2="63" stroke="#B59A5A" stroke-width="2" stroke-linecap="round"/>
+  <!-- Base Trim -->
+  <rect x="31" y="66" width="38" height="5" rx="2.5" fill="#405C3A"/>
+</svg>

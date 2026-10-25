@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowUp, Github, Linkedin } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
+import { RealGitHubIcon, RealLinkedInIcon } from './BrandIcons';
 import { profileData } from '../data/profile';
 import { useRouter } from '../context/RouterContext';
 
@@ -59,18 +60,18 @@ export const Footer: React.FC = () => {
               href={profileData.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#405C3A] flex items-center gap-1"
+              className="hover:text-[#39402F] flex items-center gap-1.5 transition-colors"
             >
-              <Github className="w-3 h-3" />
+              <RealGitHubIcon className="w-3.5 h-3.5" />
               <span>GitHub</span>
             </a>
             <a
               href={profileData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#405C3A] flex items-center gap-1"
+              className="hover:text-[#39402F] flex items-center gap-1.5 transition-colors"
             >
-              <Linkedin className="w-3 h-3" />
+              <RealLinkedInIcon className="w-3.5 h-3.5" />
               <span>LinkedIn</span>
             </a>
             <button

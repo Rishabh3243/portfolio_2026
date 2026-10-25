@@ -1,13 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Cpu } from 'lucide-react';
+import { ExternalLink, Cpu, Sparkles, Bot, Eye } from 'lucide-react';
+import { RealGitHubIcon } from './BrandIcons';
 import { Project } from '../types';
 
 interface ProjectCardProps {
   project: Project;
 }
 
+const FallbackIllustration: React.FC<{ category: string; title: string }> = ({ category, title }) => {
+  const getIcon = () => {
+    switch (category) {
+      case 'Edge AI':
+        return <Cpu className="w-8 h-8 text-[#405C3A]" />;
+      case 'GenAI':
+      case 'LLM':
+        return <Sparkles className="w-8 h-8 text-[#B59A5A]" />;
+      case 'AI Agents':
+        return <Bot className="w-8 h-8 text-[#405C3A]" />;
+      case 'Computer Vision':
+      default:
+        return <Eye className="w-8 h-8 text-[#405C3A]" />;
+    }
+  };
+
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center p-4 bg-gradient-to-br from-[#FAF7EE] to-[#E8E1C9] text-center relative overflow-hidden select-none">
+      <div
+        className="absolute inset-0 opacity-20 pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#405C3A 1px, transparent 1px)',
+          backgroundSize: '16px 16px',
+        }}
+      />
+      <div className="relative z-10 flex flex-col items-center">
+        <div className="w-12 h-12 rounded-xl bg-[#FAF7EE] border border-[#DCD4BC] flex items-center justify-center shadow-xs mb-2">
+          {getIcon()}
+        </div>
+        <div className="text-xs font-mono font-bold text-[#39402F] truncate max-w-[200px]">
+          {title}
+        </div>
+        <div className="text-[10px] font-mono text-[#77745F] mt-0.5 uppercase tracking-wider">
+          Architecture &bull; {category}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const [imgError, setImgError] = useState(false);
   const isGithubAvailable = project.githubUrl && project.githubUrl !== '#';
   const isDemoAvailable = project.demoUrl && project.demoUrl !== '#';
 
@@ -23,13 +65,19 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div>
         {/* Project Image Container */}
         <div className="relative aspect-video w-full overflow-hidden bg-[#E8E1C9] border-b border-[#DCD4BC] p-2">
-          <div className="w-full h-full rounded-xl overflow-hidden border border-[#DCD4BC] bg-[#FAF7EE] shadow-inner">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-300"
-              loading="lazy"
-            />
+          <div className="w-full h-full rounded-xl overflow-hidden border border-[#DCD4BC] bg-[#FAF7EE] shadow-inner flex items-center justify-center">
+            {!imgError && project.image ? (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-300"
+                loading="eager"
+                decoding="async"
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              <FallbackIllustration category={project.category} title={project.title} />
+            )}
           </div>
 
           {/* Category Badge */}
@@ -118,7 +166,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             rel="noopener noreferrer"
             className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-medium text-[#39402F] bg-[#FAF7EE] hover:bg-[#E8E1C9] border border-[#DCD4BC] transition-colors"
           >
-            <Github className="w-3.5 h-3.5 text-[#405C3A]" />
+            <RealGitHubIcon className="w-3.5 h-3.5 text-[#24292F]" />
             <span>Code Repo</span>
           </a>
         ) : (
@@ -126,7 +174,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-mono font-medium text-[#77745F] bg-[#FAF7EE]/60 border border-[#DCD4BC]/60 cursor-not-allowed"
             title="Repository link coming soon"
           >
-            <Github className="w-3.5 h-3.5 opacity-40" />
+            <RealGitHubIcon className="w-3.5 h-3.5 opacity-40 text-[#77745F]" />
             <span>Coming Soon</span>
           </div>
         )}

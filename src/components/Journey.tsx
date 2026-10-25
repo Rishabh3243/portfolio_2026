@@ -21,7 +21,7 @@ const iconMap: Record<string, React.ElementType> = {
 };
 
 export const Journey: React.FC = () => {
-  const [activeStep, setActiveStep] = useState<number>(3); // Default to Edge AI
+  const [activeStep, setActiveStep] = useState<number>(0); // Starts at Phase 01: Foundations
 
   return (
     <div>

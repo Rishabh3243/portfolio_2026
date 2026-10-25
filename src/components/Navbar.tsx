@@ -9,14 +9,13 @@ import {
   Trophy,
   Mail,
   FileText,
-  Github,
-  Linkedin,
   Menu,
   X,
   ChevronLeft,
   ChevronRight,
   ExternalLink,
 } from 'lucide-react';
+import { RealGitHubIcon, RealLinkedInIcon } from './BrandIcons';
 import { profileData } from '../data/profile';
 import { useRouter, RoutePath } from '../context/RouterContext';
 
@@ -181,24 +180,26 @@ export const Navbar: React.FC = () => {
                   href={profileData.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  className="p-2 rounded-lg hover:bg-[#506B42] hover:text-white transition-colors"
+                  aria-label="GitHub Profile"
+                  title="GitHub Profile"
+                  className="p-2 rounded-lg hover:bg-[#506B42] text-[#F6F0DC] hover:text-white transition-colors"
                 >
-                  <Github className="w-4 h-4" />
+                  <RealGitHubIcon className="w-4 h-4" />
                 </a>
                 <a
                   href={profileData.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="p-2 rounded-lg hover:bg-[#506B42] hover:text-white transition-colors"
+                  aria-label="LinkedIn Profile"
+                  title="LinkedIn Profile"
+                  className="p-2 rounded-lg hover:bg-[#506B42] transition-colors"
                 >
-                  <Linkedin className="w-4 h-4" />
+                  <RealLinkedInIcon className="w-4 h-4" />
                 </a>
               </div>
             </>
           ) : (
-            // Compressed Bottom Area: Resume Icon + GitHub only
+            // Compressed Bottom Area: Resume Icon + Real GitHub & Real LinkedIn
             <div className="flex flex-col items-center gap-2">
               {/* Compressed Resume Icon Button */}
               <div className="relative group flex justify-center">
@@ -223,14 +224,31 @@ export const Navbar: React.FC = () => {
                   href={profileData.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-9 rounded-lg text-[#DCD4BC] hover:bg-[#506B42] hover:text-white flex items-center justify-center transition-colors"
+                  className="w-12 h-9 rounded-lg text-[#F6F0DC] hover:bg-[#506B42] hover:text-white flex items-center justify-center transition-colors"
                   title="GitHub Profile"
                   aria-label="GitHub Profile"
                 >
-                  <Github className="w-4 h-4" />
+                  <RealGitHubIcon className="w-4 h-4" />
                 </a>
                 <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-2.5 py-1 bg-[#344C30] text-[#F6F0DC] text-xs font-mono rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-150 z-50 whitespace-nowrap shadow-md border border-[#506B42]">
                   GitHub
+                </div>
+              </div>
+
+              {/* Compressed LinkedIn */}
+              <div className="relative group flex justify-center">
+                <a
+                  href={profileData.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-9 rounded-lg hover:bg-[#506B42] flex items-center justify-center transition-colors"
+                  title="LinkedIn Profile"
+                  aria-label="LinkedIn Profile"
+                >
+                  <RealLinkedInIcon className="w-4 h-4" />
+                </a>
+                <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 px-2.5 py-1 bg-[#344C30] text-[#F6F0DC] text-xs font-mono rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-150 z-50 whitespace-nowrap shadow-md border border-[#506B42]">
+                  LinkedIn
                 </div>
               </div>
             </div>
@@ -322,19 +340,21 @@ export const Navbar: React.FC = () => {
                     href={profileData.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-[#344C30] text-[#DCD4BC]"
-                    aria-label="GitHub"
+                    className="p-2 rounded-lg bg-[#344C30] text-[#F6F0DC] hover:text-white border border-[#506B42] flex items-center justify-center"
+                    aria-label="GitHub Profile"
+                    title="GitHub Profile"
                   >
-                    <Github className="w-4 h-4" />
+                    <RealGitHubIcon className="w-4 h-4" />
                   </a>
                   <a
                     href={profileData.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-lg bg-[#344C30] text-[#DCD4BC]"
-                    aria-label="LinkedIn"
+                    className="p-2 rounded-lg bg-[#344C30] border border-[#506B42] flex items-center justify-center"
+                    aria-label="LinkedIn Profile"
+                    title="LinkedIn Profile"
                   >
-                    <Linkedin className="w-4 h-4" />
+                    <RealLinkedInIcon className="w-4 h-4" />
                   </a>
                 </div>
                 <a

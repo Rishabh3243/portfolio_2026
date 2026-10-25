@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, MapPin, CheckCircle2, Award, Briefcase, HeartHandshake } from 'lucide-react';
+import { Calendar, MapPin, CheckCircle2, Award, Briefcase, HeartHandshake, ExternalLink } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import { experienceData } from '../data/experience';
 
@@ -91,40 +91,76 @@ export const Experience: React.FC<ExperienceProps> = ({ showHeader = true }) => 
                   {/* Cream Experience Card */}
                   <div className="paper-card p-6 sm:p-7 shadow-cozy hover:shadow-cozy-lg transition-all">
                     {/* Header Row */}
-                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-3.5 mb-4 border-b border-[#DCD4BC]">
-                      <div>
+                    <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-3.5 mb-4 border-b border-[#DCD4BC]">
+                      <div className="flex items-start gap-3.5 min-w-0">
+                        {/* Organization Logo */}
+                        {exp.logo && (
+                          <a
+                            href={exp.orgUrl || '#'}
+                            target={exp.orgUrl ? '_blank' : undefined}
+                            rel="noopener noreferrer"
+                            className="w-12 h-12 rounded-xl bg-[#FAF7EE] border border-[#DCD4BC] p-1.5 flex items-center justify-center shrink-0 shadow-xs hover:border-[#405C3A] hover:scale-105 transition-all group/logo"
+                            title={`Visit ${exp.company}`}
+                          >
+                            <img
+                              src={exp.logo}
+                              alt={exp.company}
+                              className="w-full h-full object-contain"
+                              loading="eager"
+                            />
+                          </a>
+                        )}
+
+                        <div className="min-w-0 pt-0.5">
+                          <h3 className="text-lg sm:text-xl font-bold text-[#39402F] leading-snug">
+                            {exp.role}
+                          </h3>
+                          <div className="flex items-center gap-2 mt-1 flex-wrap">
+                            {exp.orgUrl ? (
+                              <a
+                                href={exp.orgUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm font-semibold text-[#405C3A] hover:text-[#344C30] hover:underline inline-flex items-center gap-1.5 transition-colors group/link"
+                              >
+                                <span>{exp.company}</span>
+                                <ExternalLink className="w-3.5 h-3.5 text-[#77745F] group-hover/link:text-[#405C3A] transition-colors" />
+                              </a>
+                            ) : (
+                              <span className="text-sm font-semibold text-[#405C3A]">{exp.company}</span>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Right: Subcategory Tag, Period, and Location in ONE Aligned Column */}
+                      <div className="flex flex-col items-start gap-1.5 shrink-0 text-xs font-mono sm:pl-4">
                         {/* Subcategory Label Tag */}
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[10px] font-mono font-semibold bg-[#E8E1C9] text-[#405C3A] border border-[#DCD4BC] mb-2">
+                        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md text-[10px] font-mono font-bold bg-[#E8E1C9] text-[#405C3A] border border-[#DCD4BC] shadow-2xs">
                           {isVoluntary ? (
                             <>
-                              <HeartHandshake className="w-3 h-3 text-[#B59A5A]" />
+                              <HeartHandshake className="w-3.5 h-3.5 text-[#B59A5A]" />
                               <span>VOLUNTARY &amp; LEADERSHIP</span>
                             </>
                           ) : (
                             <>
-                              <Briefcase className="w-3 h-3 text-[#405C3A]" />
+                              <Briefcase className="w-3.5 h-3.5 text-[#405C3A]" />
                               <span>INDUSTRY WORK EXPERIENCE</span>
                             </>
                           )}
                         </div>
 
-                        <h3 className="text-lg sm:text-xl font-bold text-[#39402F]">
-                          {exp.role}
-                        </h3>
-                        <div className="text-sm font-semibold text-[#405C3A] mt-0.5">
-                          {exp.company}
+                        {/* Period */}
+                        <div className="flex items-center gap-2 text-xs font-semibold text-[#39402F]">
+                          <Calendar className="w-3.5 h-3.5 text-[#405C3A] shrink-0" />
+                          <span>{exp.period}</span>
                         </div>
-                      </div>
 
-                      <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-[#77745F] shrink-0">
-                        <span className="flex items-center gap-1.5 bg-[#FAF7EE] px-2.5 py-1 rounded-md border border-[#DCD4BC]">
-                          <Calendar className="w-3.5 h-3.5 text-[#405C3A]" />
-                          {exp.period}
-                        </span>
-                        <span className="flex items-center gap-1.5 bg-[#FAF7EE] px-2.5 py-1 rounded-md border border-[#DCD4BC]">
-                          <MapPin className="w-3.5 h-3.5 text-[#77745F]" />
-                          {exp.location}
-                        </span>
+                        {/* Location */}
+                        <div className="flex items-center gap-2 text-[11px] text-[#77745F]">
+                          <MapPin className="w-3.5 h-3.5 text-[#77745F] shrink-0" />
+                          <span>{exp.location}</span>
+                        </div>
                       </div>
                     </div>
 

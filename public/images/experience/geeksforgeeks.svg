@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  <circle cx="50" cy="50" r="36" fill="#E8E1C9" opacity="0.6"/>
+  <!-- GeeksforGeeks iconic double curly braces -->
+  <g fill="#2F8D46">
+    <!-- Left Brace -->
+    <path d="M42 24 C34 24 30 28 30 36 V43 C30 47 26 49 23 50 C26 51 30 53 30 57 V64 C30 72 34 76 42 76 C44 76 45 75.5 46 75 V69 C45 69.5 44 70 42 70 C37 70 36 67 36 62 V56 C36 51 32 49 29 49 C32 49 36 47 36 42 V36 C36 31 37 28 42 28 C44 28 45 28.5 46 29 V23 C45 22.5 44 24 42 24 Z"/>
+    <!-- Right Brace -->
+    <path d="M58 24 C66 24 70 28 70 36 V43 C70 47 74 49 77 50 C74 51 70 53 70 57 V64 C70 72 66 76 58 76 C56 76 55 75.5 54 75 V69 C55 69.5 56 70 58 70 C63 70 64 67 64 62 V56 C64 51 68 49 71 49 C68 49 64 47 64 42 V36 C64 31 63 28 58 28 C56 28 55 28.5 54 29 V23 C55 22.5 56 24 58 24 Z"/>
+  </g>
+</svg>

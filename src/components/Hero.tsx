@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, FileText, Github, Linkedin } from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
+import { RealGitHubIcon, RealLinkedInIcon } from './BrandIcons';
 import { profileData } from '../data/profile';
 import { useRouter } from '../context/RouterContext';
 
@@ -77,18 +78,20 @@ export const Hero: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="p-2.5 text-[#39402F] hover:text-[#405C3A] bg-[#F6F0DC] hover:bg-[#E8E1C9] border border-[#DCD4BC] rounded-xl transition-colors"
+              title="GitHub Profile"
+              className="p-2.5 bg-[#F6F0DC] hover:bg-[#E8E1C9] border border-[#DCD4BC] hover:border-[#24292F] text-[#24292F] rounded-xl transition-all shadow-2xs hover:scale-105 flex items-center justify-center group"
             >
-              <Github className="w-4 h-4" />
+              <RealGitHubIcon className="w-4 h-4 text-[#24292F] group-hover:text-black transition-colors" />
             </a>
             <a
               href={profileData.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="p-2.5 text-[#39402F] hover:text-[#405C3A] bg-[#F6F0DC] hover:bg-[#E8E1C9] border border-[#DCD4BC] rounded-xl transition-colors"
+              title="LinkedIn Profile"
+              className="p-2.5 bg-[#F6F0DC] hover:bg-[#E8E1C9] border border-[#DCD4BC] hover:border-[#0A66C2] rounded-xl transition-all shadow-2xs hover:scale-105 flex items-center justify-center group"
             >
-              <Linkedin className="w-4 h-4" />
+              <RealLinkedInIcon className="w-4 h-4" />
             </a>
           </div>
         </div>

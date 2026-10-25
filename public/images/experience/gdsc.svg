@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#FAF7EE" stroke="#DCD4BC" stroke-width="2"/>
+  <circle cx="50" cy="50" r="36" fill="#E8E1C9" opacity="0.6"/>
+  <!-- Google Developer Student Clubs (GDSC) Brackets -->
+  <!-- Left Bracket < (Red top, Blue bottom) -->
+  <path d="M44 32 L30 46 L34 50 L48 36 Z" fill="#EA4335"/>
+  <path d="M30 46 L30 54 L44 68 L48 64 L34 50 Z" fill="#4285F4"/>
+  <!-- Right Bracket > (Green top, Yellow bottom) -->
+  <path d="M56 32 L52 36 L66 50 L70 46 Z" fill="#0F9D58"/>
+  <path d="M66 50 L52 64 L56 68 L70 54 L70 46 Z" fill="#FBBC04"/>
+</svg>

@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
-  Mail,
-  Linkedin,
-  Github,
-  Phone,
   Send,
   CheckCircle2,
   AlertCircle,
@@ -12,6 +8,12 @@ import {
   Check,
   ExternalLink,
 } from 'lucide-react';
+import {
+  RealGitHubIcon,
+  RealLinkedInIcon,
+  RealGmailIcon,
+  RealPhoneIcon,
+} from './BrandIcons';
 import { SectionHeading } from './SectionHeading';
 import { profileData } from '../data/profile';
 
@@ -143,8 +145,8 @@ export const Contact: React.FC = () => {
               {/* Email */}
               <div className="p-3 rounded-xl bg-[#FAF7EE] border border-[#DCD4BC] flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-[#E8E1C9] text-[#405C3A]">
-                    <Mail className="w-3.5 h-3.5" />
+                  <div className="p-1.5 rounded-lg bg-[#E8E1C9] flex items-center justify-center">
+                    <RealGmailIcon className="w-3.5 h-3.5" />
                   </div>
                   <div>
                     <div className="text-[10px] text-[#77745F]">EMAIL</div>
@@ -174,8 +176,8 @@ export const Contact: React.FC = () => {
               {/* Phone */}
               <div className="p-3 rounded-xl bg-[#FAF7EE] border border-[#DCD4BC] flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-[#E8E1C9] text-[#405C3A]">
-                    <Phone className="w-3.5 h-3.5" />
+                  <div className="p-1.5 rounded-lg bg-[#E8E1C9] flex items-center justify-center">
+                    <RealPhoneIcon className="w-3.5 h-3.5" />
                   </div>
                   <div>
                     <div className="text-[10px] text-[#77745F]">PHONE / WHATSAPP</div>
@@ -205,8 +207,8 @@ export const Contact: React.FC = () => {
               {/* LinkedIn */}
               <div className="p-3 rounded-xl bg-[#FAF7EE] border border-[#DCD4BC] flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-[#E8E1C9] text-[#405C3A]">
-                    <Linkedin className="w-3.5 h-3.5" />
+                  <div className="p-1.5 rounded-lg bg-[#E8E1C9] flex items-center justify-center">
+                    <RealLinkedInIcon className="w-3.5 h-3.5" />
                   </div>
                   <div>
                     <div className="text-[10px] text-[#77745F]">LINKEDIN</div>
@@ -219,7 +221,7 @@ export const Contact: React.FC = () => {
                   href={profileData.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-[#405C3A] hover:underline"
+                  className="text-xs text-[#405C3A] hover:underline font-medium"
                 >
                   Connect &rarr;
                 </a>
@@ -228,8 +230,8 @@ export const Contact: React.FC = () => {
               {/* GitHub */}
               <div className="p-3 rounded-xl bg-[#FAF7EE] border border-[#DCD4BC] flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="p-1.5 rounded-lg bg-[#E8E1C9] text-[#405C3A]">
-                    <Github className="w-3.5 h-3.5" />
+                  <div className="p-1.5 rounded-lg bg-[#E8E1C9] text-[#24292F] flex items-center justify-center">
+                    <RealGitHubIcon className="w-3.5 h-3.5" />
                   </div>
                   <div>
                     <div className="text-[10px] text-[#77745F]">GITHUB</div>
@@ -242,7 +244,7 @@ export const Contact: React.FC = () => {
                   href={profileData.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-[#405C3A] hover:underline"
+                  className="text-xs text-[#405C3A] hover:underline font-medium"
                 >
                   Follow &rarr;
                 </a>
