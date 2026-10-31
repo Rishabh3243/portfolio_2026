@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Eye, Cpu, Sparkles, Bot, Server, CheckCircle2, Layers } from 'lucide-react';
+import { Eye, Cpu, Sparkles, Bot, Server, CheckCircle2, Layers, Workflow } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 
 interface CategoryData {
@@ -100,9 +100,96 @@ export const ComputerVision: React.FC = () => {
     <div className="paper-card p-5 sm:p-7 mb-8 shadow-cozy border border-[#DCD4BC]">
       <SectionHeading
         eyebrow="Specialization Matrix"
-        title="What I Build"
-        subtitle="End-to-end technical capabilities across Computer Vision, Edge Silicon, Generative AI, and Deployment."
+        title="Specialization Matrix &amp; Generalized Architectures"
+        subtitle="A generalized end-to-end architecture framework integrating real-time Computer Vision pipelines, low-power Edge Silicon, local RAG architectures, autonomous AI Agents, and production DevOps."
       />
+
+      {/* Generalized Full-Stack Architecture Pipeline Flow */}
+      <div className="p-4 sm:p-5 rounded-2xl bg-[#FAF7EE] border border-[#DCD4BC] mb-6 shadow-2xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+          <div className="flex items-center gap-2">
+            <Workflow className="w-4 h-4 text-[#405C3A]" />
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#405C3A]">
+              Generalized Systems Architecture Matrix
+            </span>
+          </div>
+          <span className="text-[11px] font-mono text-[#77745F]">
+            5 Interconnected Architectural Pillars
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-5 gap-2 text-center text-xs font-mono">
+          <div
+            onClick={() => setActiveTab('cv')}
+            className={`p-2.5 rounded-xl border transition-all cursor-pointer ${
+              activeTab === 'cv'
+                ? 'bg-[#405C3A] text-[#F6F0DC] border-[#344C30] shadow-xs'
+                : 'bg-[#E8E1C9] text-[#39402F] border-[#DCD4BC] hover:border-[#405C3A]'
+            }`}
+          >
+            <div className="font-bold">1. Perception</div>
+            <div className={`text-[10px] mt-0.5 ${activeTab === 'cv' ? 'text-[#DCD4BC]' : 'text-[#77745F]'}`}>
+              YOLO &bull; RTSP &bull; OCR
+            </div>
+          </div>
+
+          <div
+            onClick={() => setActiveTab('edge')}
+            className={`p-2.5 rounded-xl border transition-all cursor-pointer ${
+              activeTab === 'edge'
+                ? 'bg-[#405C3A] text-[#F6F0DC] border-[#344C30] shadow-xs'
+                : 'bg-[#E8E1C9] text-[#39402F] border-[#DCD4BC] hover:border-[#405C3A]'
+            }`}
+          >
+            <div className="font-bold">2. Edge Silicon</div>
+            <div className={`text-[10px] mt-0.5 ${activeTab === 'edge' ? 'text-[#DCD4BC]' : 'text-[#77745F]'}`}>
+              NPU &bull; INT8 &bull; Jetson
+            </div>
+          </div>
+
+          <div
+            onClick={() => setActiveTab('genai')}
+            className={`p-2.5 rounded-xl border transition-all cursor-pointer ${
+              activeTab === 'genai'
+                ? 'bg-[#405C3A] text-[#F6F0DC] border-[#344C30] shadow-xs'
+                : 'bg-[#E8E1C9] text-[#39402F] border-[#DCD4BC] hover:border-[#405C3A]'
+            }`}
+          >
+            <div className="font-bold">3. Local GenAI</div>
+            <div className={`text-[10px] mt-0.5 ${activeTab === 'genai' ? 'text-[#DCD4BC]' : 'text-[#77745F]'}`}>
+              RAG &bull; Chroma &bull; LLMs
+            </div>
+          </div>
+
+          <div
+            onClick={() => setActiveTab('agents')}
+            className={`p-2.5 rounded-xl border transition-all cursor-pointer ${
+              activeTab === 'agents'
+                ? 'bg-[#405C3A] text-[#F6F0DC] border-[#344C30] shadow-xs'
+                : 'bg-[#E8E1C9] text-[#39402F] border-[#DCD4BC] hover:border-[#405C3A]'
+            }`}
+          >
+            <div className="font-bold">4. AI Agents</div>
+            <div className={`text-[10px] mt-0.5 ${activeTab === 'agents' ? 'text-[#DCD4BC]' : 'text-[#77745F]'}`}>
+              LangGraph &bull; Tools
+            </div>
+          </div>
+
+          <div
+            onClick={() => setActiveTab('deployment')}
+            className={`p-2.5 rounded-xl border transition-all cursor-pointer ${
+              activeTab === 'deployment'
+                ? 'bg-[#405C3A] text-[#F6F0DC] border-[#344C30] shadow-xs'
+                : 'bg-[#E8E1C9] text-[#39402F] border-[#DCD4BC] hover:border-[#405C3A]'
+            }`}
+          >
+            <div className="font-bold">5. Production</div>
+            <div className={`text-[10px] mt-0.5 ${activeTab === 'deployment' ? 'text-[#DCD4BC]' : 'text-[#77745F]'}`}>
+              Docker &bull; FastAPI
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Tabs */}
       <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 no-scrollbar">
@@ -113,7 +200,7 @@ export const ComputerVision: React.FC = () => {
             <button
               key={cat.id}
               onClick={() => setActiveTab(cat.id)}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-medium whitespace-nowrap transition-all border ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-mono font-medium whitespace-nowrap transition-all border cursor-pointer ${
                 isSelected
                   ? 'bg-[#405C3A] text-[#F6F0DC] border-[#405C3A] shadow-xs'
                   : 'bg-[#FAF7EE] text-[#77745F] border-[#DCD4BC] hover:text-[#39402F]'

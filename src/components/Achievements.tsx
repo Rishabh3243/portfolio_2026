@@ -1,8 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Trophy } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Trophy, X, FileText, CheckCircle2, Award } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 import { achievementsData } from '../data/achievements';
+import { Achievement } from '../types';
 
 interface AchievementsProps {
   showHeader?: boolean;
@@ -112,67 +113,101 @@ const SIHTrophyIcon: React.FC<{ className?: string }> = ({ className = 'w-full h
 );
 
 export const Achievements: React.FC<AchievementsProps> = ({ showHeader = false }) => {
+  const [selectedCertificate, setSelectedCertificate] = useState<Achievement | null>(null);
+  const featuredAchievement = achievementsData[0];
   const otherAchievements = achievementsData.slice(1);
+
+  // Close modal on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedCertificate(null);
+      }
+    };
+
+    if (selectedCertificate) {
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = '';
+    };
+  }, [selectedCertificate]);
 
   return (
     <div>
       {showHeader && (
         <SectionHeading
-          eyebrow="Honors & Credentials"
-          title="Awards & Recognition"
+          eyebrow="Honors &amp; Credentials"
+          title="Awards &amp; Recognition"
           subtitle="National competition laurels, academic consistency, and student chapter leadership."
         />
       )}
 
       {/* Featured National Winner Card */}
-      <div className="paper-card p-6 sm:p-8 mb-6 border border-[#B59A5A]/50 bg-gradient-to-br from-[#F6F0DC] to-[#F2ECD8] shadow-cozy relative overflow-hidden">
-        {/* Subtle decorative gold corner motif */}
-        <div className="absolute top-0 right-0 w-32 h-32 opacity-15 pointer-events-none">
-          <svg viewBox="0 0 100 100" fill="none">
-            <circle cx="100" cy="0" r="80" stroke="#B59A5A" strokeWidth="2" strokeDasharray="3 3"/>
-            <circle cx="100" cy="0" r="50" fill="#B59A5A" opacity="0.2"/>
-          </svg>
-        </div>
+      {featuredAchievement && (
+        <div className="paper-card p-6 sm:p-8 mb-6 border border-[#B59A5A]/50 bg-gradient-to-br from-[#F6F0DC] to-[#F2ECD8] shadow-cozy relative overflow-hidden">
+          {/* Subtle decorative gold corner motif */}
+          <div className="absolute top-0 right-0 w-32 h-32 opacity-15 pointer-events-none">
+            <svg viewBox="0 0 100 100" fill="none">
+              <circle cx="100" cy="0" r="80" stroke="#B59A5A" strokeWidth="2" strokeDasharray="3 3" />
+              <circle cx="100" cy="0" r="50" fill="#B59A5A" opacity="0.2" />
+            </svg>
+          </div>
 
-        <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#E8E1C9] border border-[#B59A5A]/40 text-[#405C3A] mb-3">
-              <Trophy className="w-3.5 h-3.5 text-[#B59A5A]" />
-              <span>National Champion &bull; Smart India Hackathon 2023</span>
+          <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#E8E1C9] border border-[#B59A5A]/40 text-[#405C3A] mb-3">
+                <Trophy className="w-3.5 h-3.5 text-[#B59A5A]" />
+                <span>National Champion &bull; Smart India Hackathon 2023</span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-bold text-[#39402F] mb-2 font-sans">
+                {featuredAchievement.title}
+              </h3>
+
+              <p className="text-xs sm:text-sm text-[#77745F] leading-relaxed mb-4">
+                {featuredAchievement.description}
+              </p>
+
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-[#B59A5A] text-[#F6F0DC] shadow-xs">
+                  {featuredAchievement.prize || '₹1,00,000 Cash Prize'}
+                </span>
+                <span className="px-2.5 py-1 rounded-lg text-xs font-mono text-[#39402F] bg-[#E8E1C9] border border-[#DCD4BC]">
+                  {featuredAchievement.organization}
+                </span>
+                <span className="px-2.5 py-1 rounded-lg text-xs font-mono text-[#405C3A] bg-[#E8E1C9] border border-[#DCD4BC]">
+                  Year: {featuredAchievement.year}
+                </span>
+
+                {/* View Certificate Button on Featured Card */}
+                <button
+                  type="button"
+                  onClick={() => setSelectedCertificate(featuredAchievement)}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-semibold bg-[#405C3A] text-[#F6F0DC] hover:bg-[#344C30] transition-colors shadow-xs cursor-pointer ml-auto sm:ml-0"
+                  title="View Official Certificate"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>View Certificate</span>
+                </button>
+              </div>
             </div>
 
-            <h3 className="text-xl sm:text-2xl font-bold text-[#39402F] mb-2 font-sans">
-              Smart India Hackathon 2023 Winner
-            </h3>
-
-            <p className="text-xs sm:text-sm text-[#77745F] leading-relaxed mb-4">
-              Secured 1st place nationwide for our problem statement among thousands of top competing teams across India. Awarded an INR 1,00,000 cash prize by the Ministry of Education and AICTE, Government of India.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="px-3 py-1 rounded-lg text-xs font-mono font-bold bg-[#B59A5A] text-[#F6F0DC] shadow-xs">
-                ₹1,00,000 Cash Prize
-              </span>
-              <span className="px-2.5 py-1 rounded-lg text-xs font-mono text-[#39402F] bg-[#E8E1C9] border border-[#DCD4BC]">
-                Ministry of Education, Govt. of India
-              </span>
-              <span className="px-2.5 py-1 rounded-lg text-xs font-mono text-[#405C3A] bg-[#E8E1C9] border border-[#DCD4BC]">
-                Year: 2023
+            {/* Dedicated SIH 2023 Trophy Showcase */}
+            <div className="shrink-0 flex flex-col items-center">
+              <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl bg-[#E8E1C9] border-2 border-[#B59A5A]/50 p-2.5 flex items-center justify-center shadow-cozy relative group hover:scale-105 transition-transform">
+                <SIHTrophyIcon className="w-full h-full object-contain drop-shadow-sm" />
+              </div>
+              <span className="mt-2 text-[10px] font-mono font-bold text-[#405C3A] bg-[#E8E1C9] border border-[#DCD4BC] px-2.5 py-0.5 rounded-full shadow-2xs">
+                SIH 2023 Trophy
               </span>
             </div>
           </div>
-
-          {/* Dedicated SIH 2023 Trophy Showcase */}
-          <div className="shrink-0 flex flex-col items-center">
-            <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-2xl bg-[#E8E1C9] border-2 border-[#B59A5A]/50 p-2.5 flex items-center justify-center shadow-cozy relative group hover:scale-105 transition-transform">
-              <SIHTrophyIcon className="w-full h-full object-contain drop-shadow-sm" />
-            </div>
-            <span className="mt-2 text-[10px] font-mono font-bold text-[#405C3A] bg-[#E8E1C9] border border-[#DCD4BC] px-2.5 py-0.5 rounded-full shadow-2xs">
-              SIH 2023 Trophy
-            </span>
-          </div>
         </div>
-      </div>
+      )}
 
       {/* Collectible Information Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -182,16 +217,17 @@ export const Achievements: React.FC<AchievementsProps> = ({ showHeader = false }
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.25, delay: idx * 0.06 }}
-            className="paper-card p-5 hover:bg-[#F6F0DC] transition-all flex flex-col justify-between"
+            transition={{ duration: 0.25, delay: idx * 0.05 }}
+            className="paper-card p-5 hover:bg-[#F6F0DC] transition-all flex flex-col justify-between group"
           >
             <div>
+              {/* Card Image: Every card has an image now */}
               {ach.image && (
-                <div className="w-full h-28 rounded-xl bg-[#E8E1C9] border border-[#DCD4BC] overflow-hidden p-1.5 mb-3.5">
+                <div className="w-full h-32 rounded-xl bg-[#E8E1C9] border border-[#DCD4BC] overflow-hidden p-1.5 mb-3.5 flex items-center justify-center group-hover:border-[#405C3A]/50 transition-colors">
                   <img
                     src={ach.image}
                     alt={ach.title}
-                    className="w-full h-full object-cover rounded-lg"
+                    className="w-full h-full object-contain rounded-lg drop-shadow-2xs"
                     loading="lazy"
                   />
                 </div>
@@ -208,10 +244,10 @@ export const Achievements: React.FC<AchievementsProps> = ({ showHeader = false }
                 )}
               </div>
 
-              <h4 className="text-base font-bold text-[#39402F] mb-1">
+              <h4 className="text-base font-bold text-[#39402F] mb-1 font-sans">
                 {ach.title}
               </h4>
-              <div className="text-xs font-medium text-[#77745F] mb-2.5">
+              <div className="text-xs font-medium text-[#77745F] mb-2.5 font-mono">
                 {ach.subtitle} &bull; {ach.organization}
               </div>
 
@@ -220,14 +256,183 @@ export const Achievements: React.FC<AchievementsProps> = ({ showHeader = false }
               </p>
             </div>
 
-            {ach.prize && (
-              <div className="pt-3 mt-3 border-t border-[#DCD4BC] text-xs font-mono text-[#B59A5A] font-semibold">
-                {ach.prize}
-              </div>
-            )}
+            {/* Bottom Card Action: Prize badge + Certificate Button */}
+            <div className="pt-3.5 mt-3.5 border-t border-[#DCD4BC] flex items-center justify-between gap-2">
+              {ach.prize ? (
+                <div className="text-xs font-mono text-[#B59A5A] font-semibold">
+                  {ach.prize}
+                </div>
+              ) : (
+                <div className="text-[11px] font-mono text-[#77745F] flex items-center gap-1">
+                  <CheckCircle2 className="w-3 h-3 text-[#405C3A]" />
+                  <span>Verified Credential</span>
+                </div>
+              )}
+
+              <button
+                type="button"
+                onClick={() => setSelectedCertificate(ach)}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-semibold text-[#405C3A] bg-[#E8E1C9] border border-[#DCD4BC] hover:bg-[#405C3A] hover:text-[#F6F0DC] hover:border-[#405C3A] transition-all cursor-pointer shadow-2xs"
+                title={`Inspect certificate for ${ach.title}`}
+              >
+                <FileText className="w-3 h-3" />
+                <span>Certificate</span>
+              </button>
+            </div>
           </motion.div>
         ))}
       </div>
+
+      {/* Certificate Modal Dialog */}
+      <AnimatePresence>
+        {selectedCertificate && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-5 bg-[#253622]/65 backdrop-blur-xs overflow-y-auto"
+            onClick={() => setSelectedCertificate(null)}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="certificate-modal-title"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              transition={{ duration: 0.22, ease: 'easeOut' }}
+              className="relative w-full max-w-2xl bg-[#FAF7EE] border-2 border-[#B59A5A]/60 rounded-2xl shadow-2xl p-5 sm:p-7 max-h-[92vh] overflow-y-auto my-auto no-scrollbar"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Top Bar */}
+              <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#DCD4BC]">
+                <div className="flex items-center gap-2">
+                  <div className="p-1.5 rounded-lg bg-[#E8E1C9] text-[#405C3A]">
+                    <Award className="w-4 h-4 text-[#B59A5A]" />
+                  </div>
+                  <div>
+                    <h3
+                      id="certificate-modal-title"
+                      className="text-sm font-bold text-[#39402F] font-sans"
+                    >
+                      Official Certificate &amp; Verification
+                    </h3>
+                    <div className="text-[11px] font-mono text-[#77745F]">
+                      Record ID: {selectedCertificate.credentialId || `RP-CERT-${selectedCertificate.id.toUpperCase()}`}
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setSelectedCertificate(null)}
+                  className="p-1.5 rounded-lg text-[#77745F] hover:text-[#39402F] hover:bg-[#E8E1C9] transition-colors cursor-pointer"
+                  aria-label="Close dialog"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Physical Certificate Parchment Frame */}
+              <div className="p-5 sm:p-8 rounded-xl bg-gradient-to-b from-[#FFFDF8] to-[#F6F0DC] border-2 border-[#B59A5A]/50 relative shadow-inner overflow-hidden my-3">
+                {/* Ornate Inner Dashed Frame */}
+                <div className="border border-[#B59A5A]/40 border-dashed rounded-lg p-5 sm:p-7 text-center relative">
+                  {/* Decorative Corner Seals */}
+                  <div className="absolute top-2 left-2 text-[#B59A5A] text-xs font-mono opacity-60">❖</div>
+                  <div className="absolute top-2 right-2 text-[#B59A5A] text-xs font-mono opacity-60">❖</div>
+                  <div className="absolute bottom-2 left-2 text-[#B59A5A] text-xs font-mono opacity-60">❖</div>
+                  <div className="absolute bottom-2 right-2 text-[#B59A5A] text-xs font-mono opacity-60">❖</div>
+
+                  {/* Top Seal Badge */}
+                  <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase tracking-widest bg-[#E8E1C9] text-[#405C3A] border border-[#DCD4BC] mb-3">
+                    <Award className="w-3 h-3 text-[#B59A5A]" />
+                    <span>Certificate of Recognition</span>
+                  </div>
+
+                  <div className="text-[11px] font-mono text-[#77745F] uppercase tracking-wider mb-1">
+                    This official credential is conferred upon
+                  </div>
+
+                  {/* Recipient Name */}
+                  <div className="text-2xl sm:text-3xl font-serif font-bold text-[#39402F] tracking-wide mb-1">
+                    Rishabh Parmar
+                  </div>
+
+                  {/* Gold decorative underline */}
+                  <div className="w-32 h-[2px] bg-gradient-to-r from-transparent via-[#B59A5A] to-transparent mx-auto mb-3" />
+
+                  <div className="text-xs font-mono text-[#77745F] mb-1">
+                    in recognition of outstanding accomplishment in
+                  </div>
+
+                  {/* Award Title */}
+                  <h4 className="text-lg sm:text-xl font-bold text-[#405C3A] font-sans mb-1">
+                    {selectedCertificate.title}
+                  </h4>
+
+                  {/* Organization & Year */}
+                  <div className="text-xs font-mono font-semibold text-[#39402F] mb-3">
+                    {selectedCertificate.organization} &bull; Year {selectedCertificate.year}
+                  </div>
+
+                  {/* Certificate Image Illustration */}
+                  {selectedCertificate.image && (
+                    <div className="w-full max-w-[280px] h-28 mx-auto my-3 rounded-lg bg-[#FAF7EE] border border-[#DCD4BC] p-2 flex items-center justify-center shadow-xs">
+                      <img
+                        src={selectedCertificate.image}
+                        alt=""
+                        aria-hidden="true"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  )}
+
+                  {/* Description / Citation */}
+                  <p className="text-xs text-[#77745F] max-w-lg mx-auto leading-relaxed italic mb-4">
+                    &ldquo;{selectedCertificate.certificateDetails || selectedCertificate.description}&rdquo;
+                  </p>
+
+                  {/* Prize / Badge pill if applicable */}
+                  {selectedCertificate.prize && (
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#B59A5A] text-[#F6F0DC] text-xs font-mono font-bold shadow-xs mb-4">
+                      <span>Prize Awarded: {selectedCertificate.prize}</span>
+                    </div>
+                  )}
+
+                  {/* Verification Signature & Seals Footer */}
+                  <div className="pt-4 mt-2 border-t border-[#DCD4BC] grid grid-cols-2 gap-4 text-left font-mono">
+                    <div>
+                      <div className="text-[10px] text-[#77745F] uppercase">Verification Status</div>
+                      <div className="text-xs font-bold text-[#405C3A] flex items-center gap-1 mt-0.5">
+                        <CheckCircle2 className="w-3 h-3 text-[#405C3A]" />
+                        <span>Officially Verified</span>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-[10px] text-[#77745F] uppercase">Issuing Authority</div>
+                      <div className="text-xs font-semibold text-[#39402F] mt-0.5 truncate">
+                        {selectedCertificate.organization}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dialog Actions Bottom Bar */}
+              <div className="flex items-center justify-between pt-2">
+                <span className="text-[11px] font-mono text-[#77745F]">
+                  Press <kbd className="px-1.5 py-0.5 rounded bg-[#E8E1C9] text-[#39402F] font-semibold text-[10px]">Esc</kbd> to dismiss
+                </span>
+
+                <button
+                  type="button"
+                  onClick={() => setSelectedCertificate(null)}
+                  className="px-4 py-2 rounded-xl text-xs font-semibold bg-[#405C3A] text-[#F6F0DC] hover:bg-[#344C30] transition-colors cursor-pointer"
+                >
+                  Close Dialog
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

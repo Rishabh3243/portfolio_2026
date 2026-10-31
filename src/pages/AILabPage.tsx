@@ -4,7 +4,7 @@ import { GenAI } from '../components/GenAI';
 import { AIAgents } from '../components/AIAgents';
 import { ComputerVision } from '../components/ComputerVision';
 
-type TabKey = 'all' | 'edge' | 'genai' | 'agents' | 'cv';
+type TabKey = 'all' | 'edge' | 'genai' | 'agents';
 
 export const AILabPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabKey>('all');
@@ -32,14 +32,13 @@ export const AILabPage: React.FC = () => {
           { id: 'edge', label: 'Edge AI & Silicon' },
           { id: 'genai', label: 'Local RAG & LLMs' },
           { id: 'agents', label: 'Autonomous Agents' },
-          { id: 'cv', label: '5-Domain Matrix' },
         ].map((tab) => {
           const isSelected = activeTab === tab.id;
           return (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as TabKey)}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-mono whitespace-nowrap transition-all border ${
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-mono whitespace-nowrap transition-all border cursor-pointer ${
                 isSelected
                   ? 'bg-[#405C3A] text-[#F6F0DC] border-[#344C30] shadow-xs font-semibold'
                   : 'bg-[#F2ECD8] text-[#77745F] border-[#DCD4BC] hover:text-[#39402F] hover:bg-[#FAF7EE]'
@@ -52,28 +51,30 @@ export const AILabPage: React.FC = () => {
       </div>
 
       {/* Dynamic Sections Render */}
-      <div className="space-y-12">
-        {(activeTab === 'all' || activeTab === 'edge') && (
+      <div>
+        {/* All Architectures: Show ONLY Specialization Matrix (nothing else) */}
+        {activeTab === 'all' && (
+          <div>
+            <ComputerVision />
+          </div>
+        )}
+
+        {/* Dedicated Deep Dive Sections: Shown only when corresponding tab is clicked */}
+        {activeTab === 'edge' && (
           <div>
             <EdgeAI />
           </div>
         )}
 
-        {(activeTab === 'all' || activeTab === 'genai') && (
+        {activeTab === 'genai' && (
           <div>
             <GenAI />
           </div>
         )}
 
-        {(activeTab === 'all' || activeTab === 'agents') && (
+        {activeTab === 'agents' && (
           <div>
             <AIAgents />
-          </div>
-        )}
-
-        {(activeTab === 'all' || activeTab === 'cv') && (
-          <div>
-            <ComputerVision />
           </div>
         )}
       </div>

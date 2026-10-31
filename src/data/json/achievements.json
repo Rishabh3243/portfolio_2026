@@ -3,22 +3,38 @@
     "id": "sih-2023",
     "title": "Smart India Hackathon (SIH) 2023",
     "subtitle": "National Winner — 1st Place",
-    "organization": "Ministry of Education, Govt. of India",
+    "organization": "Ministry of Education & AICTE, Govt. of India",
     "year": "2023",
-    "description": "Secured 1st place nationwide for our problem statement among thousands of top competing teams across India.",
+    "description": "Secured 1st place nationwide for our problem statement among thousands of top competing teams across India. Awarded an INR 1,00,000 cash prize by the Ministry of Education and AICTE, Government of India.",
     "prize": "₹1,00,000 Cash Prize",
     "tag": "National Champion",
-    "image": "/images/achievements/sih-2023.svg"
+    "image": "/images/achievements/sih-2023.svg",
+    "credentialId": "SIH-2023-1ST-NATIONAL",
+    "certificateDetails": "Official National Champion Certificate awarded for securing 1st Place nationwide in Smart India Hackathon 2023 Grand Finale, recognized by the Ministry of Education, Innovation Cell, and AICTE, Government of India."
   },
   {
-    "id": "nptel-star",
-    "title": "NPTEL Star (Enthusiast & Believer)",
-    "subtitle": "12 Consecutive Technical Certifications",
+    "id": "nptel-domain-enthusiast",
+    "title": "NPTEL Star — Domain Enthusiast",
+    "subtitle": "Technical Domain Specialization",
+    "organization": "NPTEL / IIT Madras",
+    "year": "2023",
+    "description": "Recognized as an elite NPTEL Star Domain Enthusiast by clearing rigorous technical and computer science certification examinations within specialized core engineering domains in a single attempt.",
+    "tag": "Domain Specialist",
+    "image": "/images/achievements/nptel-enthusiast.svg",
+    "credentialId": "NPTEL-STAR-DOMAIN-2023",
+    "certificateDetails": "Official NPTEL Star recognition issued by the National Programme on Technology Enhanced Learning (NPTEL) & IIT Madras for completing continuous advanced technical domain certifications."
+  },
+  {
+    "id": "nptel-believer",
+    "title": "NPTEL Star — Believer",
+    "subtitle": "Multi-Semester Academic Consistency",
     "organization": "NPTEL / IIT Madras",
     "year": "2022 & 2023",
-    "description": "Recognized as an elite NPTEL Star by clearing 12 consecutive rigorous technical and computer science certification exams in a single attempt.",
-    "tag": "Academic Distinction",
-    "image": "/images/achievements/nptel.svg"
+    "description": "Recognized as an elite NPTEL Star Believer for demonstrating steadfast dedication and exam excellence by appearing in and clearing national technical certifications across continuous consecutive semesters.",
+    "tag": "Star Believer",
+    "image": "/images/achievements/nptel-believer.svg",
+    "credentialId": "NPTEL-STAR-BELIEVER-2023",
+    "certificateDetails": "Official NPTEL Star Believer credential issued by NPTEL & IIT Madras for sustained multi-semester technical examination excellence."
   },
   {
     "id": "cvm-gaurav-puraskar",
@@ -28,7 +44,9 @@
     "year": "2024",
     "description": "Awarded the prestigious CVM Gaurav Puraskar felicitation for demonstrating exceptional performance, leadership, and national technical laurels.",
     "tag": "Honor & Recognition",
-    "image": "/images/achievements/cvm-award.svg"
+    "image": "/images/achievements/cvm-award.svg",
+    "credentialId": "CVM-GAURAV-2024",
+    "certificateDetails": "Institutional Honor & Felicitation awarded by Charutar Vidya Mandal (CVM) for distinguished academic and national hackathon achievements."
   },
   {
     "id": "hacktoberfest-2022",
@@ -37,7 +55,10 @@
     "organization": "DigitalOcean & GitHub",
     "year": "2022",
     "description": "Authored and successfully merged 5 pull requests across 2 open-source repositories, earning top 40,000 global ranking.",
-    "tag": "Open Source"
+    "tag": "Open Source",
+    "image": "/images/achievements/hacktoberfest.svg",
+    "credentialId": "HACKTOBERFEST-2022-CONTRIBUTOR",
+    "certificateDetails": "Official Open-Source Contribution Recognition certified by DigitalOcean, GitHub, and Docker for completing Hacktoberfest 2022 challenges."
   },
   {
     "id": "sih-2022-prequal",
@@ -46,6 +67,9 @@
     "organization": "Smart India Hackathon",
     "year": "2022",
     "description": "Shortlisted at the institutional evaluation level among hundreds of participating engineering teams.",
-    "tag": "Finalist"
+    "tag": "Finalist",
+    "image": "/images/achievements/sih-2022.svg",
+    "credentialId": "SIH-2022-INSTITUTIONAL-FINALIST",
+    "certificateDetails": "Institutional Selection & Finalist Certificate for Smart India Hackathon 2022 internal hackathon evaluation round."
   }
 ]

@@ -98,9 +98,15 @@ export const Experience: React.FC<ExperienceProps> = ({ showHeader = true }) => 
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.85 }}
                         transition={{ duration: 0.2 }}
-                        className="relative flex items-center justify-start md:justify-center my-5 md:my-8 z-30"
+                        className="relative flex items-center justify-start md:justify-center my-4 md:my-8 z-30"
                       >
-                        <div className="relative left-4 sm:left-6 md:left-auto -translate-x-1/2 md:translate-x-0">
+                        {/* Timeline Node on Mobile - Centered on the vertical line */}
+                        <div className="md:hidden absolute left-4 sm:left-6 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#FAF7EE] border-[2.5px] border-[#405C3A] shadow-xs flex items-center justify-center z-20">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#405C3A]" />
+                        </div>
+
+                        {/* Year Badge: Placed with safe padding on mobile so it never gets cut off */}
+                        <div className="relative pl-8 sm:pl-12 md:pl-0">
                           <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FAF7EE] border-2 border-[#405C3A] text-[#405C3A] font-mono font-bold text-xs shadow-xs tracking-wider">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#405C3A]" />
                             <span>{currentYear}</span>

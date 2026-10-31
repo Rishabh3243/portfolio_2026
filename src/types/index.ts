@@ -66,6 +66,8 @@ export interface Achievement {
   prize?: string;
   tag?: string;
   image?: string;
+  credentialId?: string;
+  certificateDetails?: string;
 }
 
 export interface Education {

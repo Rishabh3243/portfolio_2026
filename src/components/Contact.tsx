@@ -131,18 +131,19 @@ export const Contact: React.FC = () => {
         subtitle="Interested in AI Agents, LLMs, Generative AI, Edge AI, or Computer Vision projects? Let's connect."
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         {/* Direct Channels */}
-        <div className="lg:col-span-5 space-y-4">
-          <div className="paper-card p-6 border border-[#DCD4BC]">
-            <h3 className="text-base font-bold text-[#39402F] mb-1.5">
-              Direct Channels
-            </h3>
-            <p className="text-xs text-[#77745F] mb-5 leading-relaxed">
-              Direct engineering collaboration for autonomous agentic workflows, local RAG architectures, hardware-aware edge silicon, and computer vision pipelines.
-            </p>
+        <div className="lg:col-span-5 flex flex-col">
+          <div className="paper-card p-6 sm:p-8 border border-[#DCD4BC] flex-1 flex flex-col justify-between h-full">
+            <div>
+              <h3 className="text-base font-bold text-[#39402F] mb-1.5 font-sans">
+                Get in Touch &amp; Collaborate
+              </h3>
+              <p className="text-xs text-[#77745F] mb-5 leading-relaxed">
+                Reach out directly for production AI engineering, custom Computer Vision pipelines, Edge AI on embedded silicon, and autonomous LLM agent systems. Open for technical consulting, architecture reviews, and engineering partnerships.
+              </p>
 
-            <div className="space-y-2.5 text-xs font-mono">
+              <div className="space-y-2.5 text-xs font-mono">
               {/* Email */}
               <div className="p-3 rounded-xl bg-[#FAF7EE] border border-[#DCD4BC] flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
@@ -252,36 +253,57 @@ export const Contact: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Contact Form */}
-        <div className="lg:col-span-7">
-          <div className="paper-card p-6 sm:p-8 border border-[#DCD4BC]">
-            {isSubmitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="p-8 text-center"
+          {/* Availability Status Footer to balance height */}
+          <div className="mt-6 pt-4 border-t border-[#DCD4BC] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono text-[#77745F]">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="font-semibold text-[#405C3A]">Available for Collaborations</span>
+            </div>
+            <span className="text-[11px] text-[#77745F]">Response within 24h</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="lg:col-span-7 flex flex-col">
+        <div className="paper-card p-6 sm:p-8 border border-[#DCD4BC] flex-1 flex flex-col justify-between h-full">
+          {isSubmitted ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="p-8 text-center my-auto"
+            >
+              <div className="w-12 h-12 rounded-full bg-[#E8E1C9] border border-[#405C3A]/40 text-[#405C3A] flex items-center justify-center mx-auto mb-3">
+                <CheckCircle2 className="w-6 h-6" />
+              </div>
+              <h4 className="text-lg font-bold text-[#39402F] mb-1.5 font-sans">
+                Message Transmitted Successfully
+              </h4>
+              <p className="text-xs sm:text-sm text-[#77745F] max-w-sm mx-auto mb-5">
+                Thank you! Your message has been delivered to Rishabh, and an acknowledgement email has been sent to your inbox. He will review your inquiry and contact you in a while.
+              </p>
+              <button
+                type="button"
+                onClick={() => setIsSubmitted(false)}
+                className="px-4 py-2 rounded-xl text-xs font-semibold bg-[#405C3A] text-[#F6F0DC] hover:bg-[#344C30] transition-colors"
               >
-                <div className="w-12 h-12 rounded-full bg-[#E8E1C9] border border-[#405C3A]/40 text-[#405C3A] flex items-center justify-center mx-auto mb-3">
-                  <CheckCircle2 className="w-6 h-6" />
+                Send Another Note
+              </button>
+            </motion.div>
+          ) : (
+            <div className="flex-1 flex flex-col justify-between">
+              <div>
+                <div className="mb-5 pb-4 border-b border-[#DCD4BC]">
+                  <h3 className="text-base font-bold text-[#39402F] mb-1 font-sans">
+                    Send a Message
+                  </h3>
+                  <p className="text-xs text-[#77745F] leading-relaxed">
+                    Have an AI project inquiry, technical collaboration idea, or consulting opportunity? Fill out the details below to dispatch a message directly.
+                  </p>
                 </div>
-                <h4 className="text-lg font-bold text-[#39402F] mb-1.5 font-sans">
-                  Message Transmitted Successfully
-                </h4>
-                <p className="text-xs sm:text-sm text-[#77745F] max-w-sm mx-auto mb-5">
-                  Thank you! Your message has been delivered to Rishabh, and an acknowledgement email has been sent to your inbox. He will review your inquiry and contact you in a while.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setIsSubmitted(false)}
-                  className="px-4 py-2 rounded-xl text-xs font-semibold bg-[#405C3A] text-[#F6F0DC] hover:bg-[#344C30] transition-colors"
-                >
-                  Send Another Note
-                </button>
-              </motion.div>
-            ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-4">
+
+                <form onSubmit={handleSubmit} noValidate className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[11px] font-mono text-[#77745F] uppercase font-semibold mb-1.5">
@@ -418,7 +440,9 @@ export const Contact: React.FC = () => {
                   )}
                 </button>
               </form>
-            )}
+            </div>
+          </div>
+          )}
           </div>
         </div>
       </div>
